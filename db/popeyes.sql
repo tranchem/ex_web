@@ -30,22 +30,6 @@ CREATE TABLE `tbl_danh_muc`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for tbl_don_hang
--- ----------------------------
-DROP TABLE IF EXISTS `tbl_don_hang`;
-CREATE TABLE `tbl_don_hang`  (
-  `id_don_hang` int(11) NOT NULL AUTO_INCREMENT,
-  `id_khach_hang` int(11) NULL DEFAULT NULL,
-  `id_nhan_vien` int(11) NOT NULL,
-  `tong_tien` float(255, 0) NOT NULL,
-  `trang_thai` int(4) NULL DEFAULT 0,
-  `ngay_dat` datetime(6) NULL DEFAULT NULL,
-  PRIMARY KEY (`id_don_hang`) USING BTREE,
-  INDEX `id_khach_hang`(`id_khach_hang`) USING BTREE,
-  INDEX `id_nhan_vien`(`id_nhan_vien`) USING BTREE,
-  CONSTRAINT `tbl_don_hang_ibfk_1` FOREIGN KEY (`id_khach_hang`) REFERENCES `tbl_khach_hang` (`id_khach_hang`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `tbl_don_hang_ibfk_2` FOREIGN KEY (`id_nhan_vien`) REFERENCES `tbl_nhan_vien` (`id_nhan_vien`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for tbl_khach_hang
@@ -94,6 +78,22 @@ CREATE TABLE `tbl_san_pham`  (
 
 SET FOREIGN_KEY_CHECKS = 1;
 
+-- Table structure for tbl_don_hang
+-- ----------------------------
+DROP TABLE IF EXISTS `tbl_don_hang`;
+CREATE TABLE `tbl_don_hang`  (
+  `id_don_hang` int(11) NOT NULL AUTO_INCREMENT,
+  `id_khach_hang` int(11) NULL DEFAULT NULL,
+  `id_nhan_vien` int(11) NOT NULL,
+  `tong_tien` float(255, 0) NOT NULL,
+  `trang_thai` int(4) NULL DEFAULT 0,
+  `ngay_dat` datetime(6) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_don_hang`) USING BTREE,
+  INDEX `id_khach_hang`(`id_khach_hang`) USING BTREE,
+  INDEX `id_nhan_vien`(`id_nhan_vien`) USING BTREE,
+  CONSTRAINT `tbl_don_hang_ibfk_1` FOREIGN KEY (`id_khach_hang`) REFERENCES `tbl_khach_hang` (`id_khach_hang`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `tbl_don_hang_ibfk_2` FOREIGN KEY (`id_nhan_vien`) REFERENCES `tbl_nhan_vien` (`id_nhan_vien`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for tbl_chi_tiet_don_hang
