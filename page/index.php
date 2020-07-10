@@ -340,7 +340,7 @@
 					</div>
 					<div class="line-top"></div>
 					<div class="page-header-container container">
-						<a class="logo" href="index.html">
+						<a class="logo" href="?tp=welcome">
 							<img src="../assets/skin/frontend/rwd/popeyes/images/Popeyes-New-Logo.png"
 								alt="Popeyes Viet Nam" class="large" />
 							<img src="../assets/skin/frontend/rwd/popeyes/images/Popeyes-New-Logo.png"
@@ -353,19 +353,19 @@
 											class="level0 has-children">Thực Đơn</a>
 										<ul class="level0">
 
-<?php
-	$sql = "SELECT * FROM tbl_danhmuc";
-	$result = $connection->query($sql);
-	while($row = mysqli_fetch_array($result))  {
-	?>
-		<li class="level1 nav-1-1 first">
-			<a href="products/ala-carte.html" class="level1 "><?php echo $row['tendanhmuc'] ?></a>
-		</li>
-	<?php
-	}
+										<?php
+											$sql = "SELECT * FROM tbl_danhmuc";
+											$result = $connection->query($sql);
+											while($row = mysqli_fetch_array($result))  {
+											?>
+												<li class="level1 nav-1-1 first">
+													<a href="?tp=product&danhmuc=<?php echo $row['id_danhmuc'] ?>" class="level1 "><?php echo $row['tendanhmuc'] ?></a>
+												</li>
+											<?php
+											}
 
-	
-?>
+											
+										?>
 
 											<!-- <li class="level1 nav-1-1 first"><a href="products/ala-carte.html"
 													class="level1 ">Ala carte</a></li>
