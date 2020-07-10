@@ -18,23 +18,6 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for tbl_chi_tiet_don_hang
--- ----------------------------
-DROP TABLE IF EXISTS `tbl_chi_tiet_don_hang`;
-CREATE TABLE `tbl_chi_tiet_don_hang`  (
-  `id_don_hang` int(11) NOT NULL,
-  `id_san_pham` int(11) NOT NULL,
-  `don_gia` float(255, 0) NOT NULL,
-  `so_luong` int(11) NOT NULL,
-  `thanh_tien` float(255, 0) NOT NULL,
-  `ghi_chu` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id_don_hang`, `id_san_pham`) USING BTREE,
-  INDEX `id_san_pham`(`id_san_pham`) USING BTREE,
-  CONSTRAINT `tbl_chi_tiet_don_hang_ibfk_1` FOREIGN KEY (`id_don_hang`) REFERENCES `tbl_don_hang` (`id_don_hang`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `tbl_chi_tiet_don_hang_ibfk_2` FOREIGN KEY (`id_san_pham`) REFERENCES `tbl_san_pham` (`id_san_pham`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
 -- Table structure for tbl_danh_muc
 -- ----------------------------
 DROP TABLE IF EXISTS `tbl_danh_muc`;
@@ -110,3 +93,21 @@ CREATE TABLE `tbl_san_pham`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+
+-- ----------------------------
+-- Table structure for tbl_chi_tiet_don_hang
+-- ----------------------------
+DROP TABLE IF EXISTS `tbl_chi_tiet_don_hang`;
+CREATE TABLE `tbl_chi_tiet_don_hang`  (
+  `id_don_hang` int(11) NOT NULL,
+  `id_san_pham` int(11) NOT NULL,
+  `don_gia` float(255, 0) NOT NULL,
+  `so_luong` int(11) NOT NULL,
+  `thanh_tien` float(255, 0) NOT NULL,
+  `ghi_chu` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id_don_hang`, `id_san_pham`) USING BTREE,
+  INDEX `id_san_pham`(`id_san_pham`) USING BTREE,
+  CONSTRAINT `tbl_chi_tiet_don_hang_ibfk_1` FOREIGN KEY (`id_don_hang`) REFERENCES `tbl_don_hang` (`id_don_hang`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `tbl_chi_tiet_don_hang_ibfk_2` FOREIGN KEY (`id_san_pham`) REFERENCES `tbl_san_pham` (`id_san_pham`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
