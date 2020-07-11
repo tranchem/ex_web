@@ -62,13 +62,14 @@
 								</div>
 								<div class="product-info">
 									<h2 class="product-name">
-										Combo Gà Cháy Tỏi - 1 người </h2>
+										<?php echo $row['ten_san_pham'] ?>
+									</h2>
 									<div>
 										<span class="price">&nbsp;</span>
 
 										<div class="price-box">
 											<p class="price-from">
-												<span class="price">94.000 ₫</span> </p>
+												<span class="price"><?php echo number_format($row['don_gia']) ?> ₫</span> </p>
 
 										</div>
 									</div>
