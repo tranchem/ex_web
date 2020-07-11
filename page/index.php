@@ -122,7 +122,7 @@
 		//]]></script>
 </head>
 
-<body class=" cms-index-index cms-home">
+<body class=" cms-index-index cms-home catalog-category-view">
 	<!-- Google Tag Manager (noscript) -->
 
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4GVXSK" height="0" width="0"
@@ -354,17 +354,15 @@
 										<ul class="level0">
 
 										<?php
-											$sql = "SELECT * FROM tbl_danhmuc";
+											$sql = "SELECT * FROM tbl_danh_muc";
 											$result = $connection->query($sql);
 											while($row = mysqli_fetch_array($result))  {
 											?>
 												<li class="level1 nav-1-1 first">
-													<a href="?tp=product&danhmuc=<?php echo $row['id_danhmuc'] ?>" class="level1 "><?php echo $row['tendanhmuc'] ?></a>
+													<a href="?tp=product&cate=<?php echo $row['id_danh_muc'] ?>" class="level1 "><?php echo $row['ten_danh_muc'] ?></a>
 												</li>
 											<?php
 											}
-
-											
 										?>
 
 											<!-- <li class="level1 nav-1-1 first"><a href="products/ala-carte.html"
