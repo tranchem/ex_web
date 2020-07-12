@@ -1,8 +1,8 @@
 <?php 
-	//xóa chuyên mục
+	//xóa slideshow
 if(isset($_GET['idxoa'])){
      $id=$_GET['idxoa'];
-     $sql="DELETE FROM tbl_danh_muc where id_danh_muc=$id";
+     $sql="DELETE FROM tbl_slideshow where id=$id";
      
      if($connection->query($sql))
      {
@@ -21,20 +21,18 @@ if(isset($_GET['idxoa'])){
      
  }
 
-	//Hiển thị danh sách danh mục
-      $sql="SELECT * from tbl_danh_muc";
+	//Hiển thị danh sách slideshow
+      $sql="SELECT * from tbl_slideshow";
       $query=$connection->query($sql);
  ?>
 <div>
-	<h1> Danh sách danh mục </h1>
-	<a class="btn btn-success" href="?ql=danhmuc/them">Thêm</a>
+	<h1> Danh sách hình ảnh slideshow </h1>
+	<a class="btn btn-success" href="?ql=slideshow/them">Thêm</a>
      <div class="table-responsive">
 	  <table class="table align-items-center table-flush">
 	    <thead class="thead-light">
 	      <tr>
 	        <th scope="col">STT</th>
-	        <th scope="col">Tên danh mục</th>
-	        <th scope="col">Mô tả</th>
 	        <th scope="col">Ảnh</th>
 	        <th scope="col">Tác vụ</th>
 	        
@@ -47,14 +45,12 @@ if(isset($_GET['idxoa'])){
 	    	 ?>
 	        <tr>
 	        	<td><?php echo $stt; ?></td>
-	        	<td><?php echo $row['ten_danh_muc']; ?></td>
-	        	<td><?php echo $row['mo_ta']; ?></td>
-				<td>
-					<img src="uploads/<?php echo $row['anh'] ?>" alt="">
-				</td>
 	        	<td>
-	        		<a class="btn btn-outline-primary" href="?ql=danhmuc/sua&idsua=<?php echo $row['id_danh_muc']?>">Sửa</a>
-	        		<a class="btn btn-outline-warning" href="?ql=danhmuc/ds&idxoa=<?php echo $row['id_danh_muc']?>">Xóa</a>
+	        		<img style="height: 100px " src="uploads/<?php echo $row['Anh'] ?>" alt="">
+	        	</td>
+	        	<td>
+	        		<a class="btn btn-outline-primary" href="?ql=slideshow/sua&idsua=<?php echo $row['id']?>">Sửa</a>
+	        		<a class="btn btn-outline-warning" href="?ql=slideshow/ds&idxoa=<?php echo $row['id']?>">Xóa</a>
 	        	</td>
 	        </tr>
 	    <?php $stt++; } ?>

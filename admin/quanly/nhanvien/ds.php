@@ -2,7 +2,7 @@
         //xóa chuyên mục
 if(isset($_GET['idxoa'])){
      $id=$_GET['idxoa'];
-     $sql="DELETE FROM tbl_nhanvien where id_nhan_vien=$id";
+     $sql="DELETE FROM tbl_nhan_vien where id_nhan_vien=$id";
      
      if($connection->query($sql))
      {
@@ -22,7 +22,7 @@ if(isset($_GET['idxoa'])){
  }
      //hiển thị danh sách danh mục
 
-      $sql="SELECT * from tbl_nhanvien";
+      $sql="SELECT * from tbl_nhan_vien";
       $query=$connection->query($sql);
  ?>
 <div>
@@ -38,7 +38,6 @@ if(isset($_GET['idxoa'])){
           <th scope="col">Số điện thoại</th>
           <th scope="col">Tài khoản</th>
           <th scope="col">Mật khẩu</th>
-          <th scope="col">Địa Chỉ</th>
           <th scope="col">Tác vụ</th>
           
         </tr>
@@ -54,10 +53,9 @@ if(isset($_GET['idxoa'])){
             <td><?php echo $stt; ?></td>
             <td><?php echo $row['ten_nhan_vien']; ?></td>
             <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['sodt']; ?></td>
+            <td><?php echo $row['so_dien_thoai']; ?></td>
             <td><?php echo $row['tai_khoan']; ?></td>
             <td><?php echo $row['mat_khau']; ?></td>
-            <td><?php echo $row['dia_chi']; ?></td>
 
             <td>
               <a class="btn btn-warning" href="?ql=nhanvien/sua&idsua=<?php echo $row['id_nhan_vien']?>">Sửa</a>

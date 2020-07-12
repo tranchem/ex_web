@@ -145,7 +145,7 @@ include_once("ketnoi.php");
 
           <li class="nav-item">
             <a class="nav-link" href="?ql=slideshow/ds">
-              <i class="ni ni-image text-black"></i> Bộ chỉnh ảnh
+              <i class="ni ni-image text-black"></i> Bộ trình ảnh
 
             </a>
           </li>

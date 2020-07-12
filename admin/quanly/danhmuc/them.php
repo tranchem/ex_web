@@ -5,7 +5,7 @@
 		if($tendanhmuc==""){
 			echo "Vui lòng nhập đủ thông tin!";
 		}else{
-			$sql = "INSERT INTO tbl_danhmuc (ten_danh_muc) VALUES ('$tendanhmuc')";
+			$sql = "INSERT INTO tbl_danh_muc (ten_danh_muc, mo_ta, anh) VALUES ('$tendanhmuc','$mota','$anh')";
 			if ($connection->query($sql)) 
 				echo "Thêm thành công";
 			else
@@ -30,6 +30,12 @@
 										<div class="form-group focused">
 											<label class="form-control-label" for="input-username">Tên danh mục</label>
 											<input name="tendanhmuc" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Tên danh mục">
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form-group focused">
+											<label class="form-control-label" for="input-username">Mô tả</label>
+											<input name="mota" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Mô tả">
 										</div>
 									</div>
 								</div>

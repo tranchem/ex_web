@@ -6,10 +6,11 @@
       $diachi = $_POST['dia_chi'];
       $sodt = $_POST['sodt'];
       $email = $_POST['email'];
-
+      $ghichu = $_POST['ghichu'];
+      $matkhau = $_POST['matkhau'];
 	
 			//Cập nhật dữ liệu
-			$sql = "UPDATE tbl_khachhang SET ten_khach_hang = '$tenkhachhang', dia_chi = '$diachi', sodt='$sodt', email='$email'  WHERE id_khach_hang = $id";
+			$sql = "UPDATE tbl_khach_hang SET ten_khach_hang = '$tenkhachhang', dia_chi = '$diachi', so_dien_thoai='$sodt', email='$email', ghi_chu='$ghichu', mat_khau='$matkhau' WHERE id_khach_hang = $id";
 
 			if($connection->query($sql))
 				echo "<div class='alert alert-success' role='alert'>
@@ -24,7 +25,7 @@
 	}
 
    //Hiển thị thông tin cần sửa
-   $sql = "SELECT * FROM tbl_khachhang WHERE id_khach_hang = $id";
+   $sql = "SELECT * FROM tbl_khach_hang WHERE id_khach_hang = $id";
    $query = $connection->query($sql);
    $row = $query->fetch_assoc();
  ?>
@@ -53,11 +54,21 @@
                               </div>
                               <div class="form-group">
                                  <label class="form-control-label" for="input-username">Số điện thoại</label>
-                                 <input name="sodt" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Số điện thoại" value="<?php echo $row['sodt'] ?>">
+                                 <input name="sodt" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Số điện thoại" value="<?php echo $row['so_dien_thoai'] ?>">
                               </div>
                               <div class="form-group">
                                  <label class="form-control-label" for="input-username">Email</label>
                                  <input name="email" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Email" value="<?php echo $row['email'] ?>">
+                              </div>
+
+                              <div class="form-group">
+                                 <label class="form-control-label" for="input-username">Ghi chú</label>
+                                 <input name="ghichu" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Ghi chú" value="<?php echo $row['ghi_chu'] ?>">
+                              </div>
+
+                              <div class="form-group">
+                                 <label class="form-control-label" for="input-username">Mật khẩu</label>
+                                 <input name="matkhau" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Mật khẩu" value="<?php echo $row['mat_khau'] ?>">
                               </div>
                            </div>
                         </div>

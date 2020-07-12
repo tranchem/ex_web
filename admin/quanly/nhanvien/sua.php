@@ -30,15 +30,6 @@ if(isset($_POST['sua']))
     
   }
 
-  $diachi=$_POST['diachi'];
-  if($diachi=="")
-  {
-    $hople = false;
-    $message .= "<div>Bạn chưa nhập địa chỉ</div>";
-
-    
-  }
-
   $taikhoan=$_POST['taikhoan'];
   if($taikhoan=="")
   {
@@ -72,8 +63,7 @@ if(isset($_POST['sua']))
             `ten_nhan_vien` = '".$tennhanvien."',
             `email` = '".$email."',
             `sodt` = '".$sodienthoai."',
-            `tai_khoan` = '".$taikhoan."',
-            `dia_chi` = '".$diachi."'
+            `tai_khoan` = '".$taikhoan."'
          WHERE `id_nhan_vien` = '".$id."' 
       ";
 
@@ -92,7 +82,7 @@ if(isset($_POST['sua']))
 
 }     
         //hiển thị dữ liệu cần sửa 
-       $sql="SELECT * from tbl_nhanvien where id_nhan_vien=$id";
+       $sql="SELECT * from tbl_nhan_vien where id_nhan_vien=$id";
        $query=$connection->query($sql);
        $row=$query->fetch_assoc();
 
@@ -124,12 +114,6 @@ if(isset($_POST['sua']))
             <div class="form-group focused">
                <label class="form-control-label" for="input-first-name">Số điện thoại</label>
                <input name="sodienthoai" type="text" id="input-first-name" class="form-control form-control-alternative"value="<?php echo $row['sodt'] ?>" >
-            </div>
-         </div>
-         <div class="col-lg-6">
-            <div class="form-group focused">
-               <label class="form-control-label" for="input-last-name">Địa chỉ</label>
-               <input name="diachi" type="text" id="input-last-name" class="form-control form-control-alternative" value="<?php echo $row['dia_chi'] ?>">
             </div>
          </div>
       </div>

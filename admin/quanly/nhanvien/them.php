@@ -29,14 +29,6 @@ if(isset($_POST['them']))
 		
 	}
 
-	$diachi=$_POST['diachi'];
-	if($diachi=="")
-	{
-		$hople = false;
-		$message .= "<div>Bạn chưa nhập địa chỉ</div>";
-
-		
-	}
 
 	$taikhoan=$_POST['taikhoan'];
 	if($taikhoan=="")
@@ -60,18 +52,16 @@ if(isset($_POST['them']))
 				</div>";
 	}
 	else {
-		$sql="INSERT INTO tbl_nhanvien (ten_nhan_vien,email,sodt,tai_khoan,mat_khau,dia_chi) VALUES ('$tennhanvien','$email','$sodienthoai','$taikhoan','$matkhau','$diachi') ";
-
+		$sql="INSERT INTO tbl_nhan_vien (ten_nhan_vien, email, so_dien_thoai, tai_khoan, mat_khau) VALUES ('$tennhanvien','$email','$sodienthoai','$taikhoan','$matkhau') ";
 		if($connection->query($sql))
      {
-     	echo "thêm thành công";
+     	echo "Thêm thành công";
      }
 
          else
          {
-         	echo "thêm thất bại";
+         	echo "Thêm thất bại";
          }
-
 	}
 
 }
@@ -85,13 +75,13 @@ if(isset($_POST['them']))
    <h6 class="heading-small text-muted mb-4">Thông tin nhân viên</h6>
    <div class="pl-lg-4">
       <div class="row">
-         <div class="col-lg-6">
+         <div class="col-lg-12">
             <div class="form-group focused">
                <label class="form-control-label" for="input-username">Tên nhân viên</label>
                <input name="tennhanvien" type="text" id="input-username" class="form-control form-control-alternative" >
             </div>
          </div>
-         <div class="col-lg-6">
+         <div class="col-lg-12">
             <div class="form-group">
                <label class="form-control-label" for="input-email">Email </label>
                <input name="email" type="email" id="input-email" class="form-control form-control-alternative" >
@@ -99,27 +89,21 @@ if(isset($_POST['them']))
          </div>
       </div>
       <div class="row">
-         <div class="col-lg-6">
+         <div class="col-lg-12">
             <div class="form-group focused">
                <label class="form-control-label" for="input-first-name">Số điện thoại</label>
                <input name="sodienthoai" type="text" id="input-first-name" class="form-control form-control-alternative" >
             </div>
          </div>
-         <div class="col-lg-6">
-            <div class="form-group focused">
-               <label class="form-control-label" for="input-last-name">Địa chỉ</label>
-               <input name="diachi" type="text" id="input-last-name" class="form-control form-control-alternative" >
-            </div>
-         </div>
       </div>
       <div class="row">
-         <div class="col-lg-6">
+         <div class="col-lg-12">
             <div class="form-group focused">
                <label class="form-control-label" for="input-first-name">Tài khoản</label>
                <input name="taikhoan" type="text" id="input-first-name" class="form-control form-control-alternative" >
             </div>
          </div>
-         <div class="col-lg-6">
+         <div class="col-lg-12">
             <div class="form-group focused">
                <label class="form-control-label" for="input-last-name">Mật khẩu</label>
                <input name="matkhau" type="text" id="input-last-name" class="form-control form-control-alternative" >
