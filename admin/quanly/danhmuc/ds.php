@@ -50,8 +50,8 @@ if(isset($_GET['idxoa'])){
 	        	<td><?php echo $row['ten_danh_muc']; ?></td>
 	        	<td><?php echo $row['mo_ta']; ?></td>
 				<td>
-					<img src="uploads/<?php echo $row['anh'] ?>" alt="">
-				</td>
+	        		<img style="height: 100px " src="uploads/<?php echo $row['anh'] ?>" alt="">
+	        	</td>
 	        	<td>
 	        		<a class="btn btn-outline-primary" href="?ql=danhmuc/sua&idsua=<?php echo $row['id_danh_muc']?>">Sửa</a>
 	        		<a class="btn btn-outline-warning" href="?ql=danhmuc/ds&idxoa=<?php echo $row['id_danh_muc']?>">Xóa</a>
