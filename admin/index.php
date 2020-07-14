@@ -9,7 +9,7 @@ include_once("ketnoi.php");
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+  <title>QUẢN TRỊ - POPEYES</title>
   <!-- Favicon -->
   <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
@@ -32,8 +32,8 @@ include_once("ketnoi.php");
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="./index.html">
-        <img src="./assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+      <a class="navbar-brand pt-0" href=".popeyes/page/index.php">
+        <img style="width: 300px; height: 100px" src="./assets/img/brand/logo.jpg" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
