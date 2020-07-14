@@ -398,7 +398,7 @@
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
 									<li class="level0 nav-6 active last"><a
-											href="https://www.facebook.com/PopeyesVN/app/640050273198209/"
+											href="?tp=contact"
 											class="level0 ">Liên hệ</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
@@ -890,10 +890,9 @@
 						</div>
 					</div>
 				</div>
-				<address class="copyright">CÔNG TY TNHH DỊCH VỤ THỰC PHẨM VÀ GIẢI KHÁT VIỆT NAM. <br> Lầu 5, Tòa Nhà
-					Saigon Royal, Số 91 Pasteur, Phường Bến Nghé, Quận 1, TP. HCM <br> Hotline: 1900 6008 | Email:
+				<address class="copyright">HỌC VIỆN NGÂN HÀNG <br> SỐ 12 CHÙA BỘC - HÀ NỘI <br> Hotline: 1900 6008 | Email:
 					contact@popeyes.vn | MST: 0310 362 754 <div class="levinci-introduce"><a class="levinci-link"
-							href="https://levincigroup.com/">Designed by Levinci Group</a></div>
+							href="https://levincigroup.com/">Designed by 20 Group</a></div>
 				</address>
 
 			</div>

@@ -82,7 +82,7 @@
                                     <div class="row">
                                         <div class="year-1970">
                                             <div class="col-md-7">
-                                                <div class="image-his right"><img alt="his-1980-1"
+                                                <div class="image-his right"><img style="width: 70%;height: 30%" alt="his-1980-1"
                                                         src=".././assets/media/wysiwyg/popeyes/his-1980-1.jpg" />
                                                     <div class="desc">
                                                         <p>Popeyes giới thiệu tagline "Love That Chicken from
@@ -106,7 +106,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-7 hidden-xs hidden-sm">
-                                                <div class="image-his right"><img alt="his-1980-2"
+                                                <div class="image-his right"><img style="width: 70%;height: 35%;" alt="his-1980-2"
                                                         src=".././assets/media/wysiwyg/popeyes/his-1980-2.jpg" />
                                                     <div class="desc">
                                                         <p>Popeyes giới thiệu m&oacute;n T&ocirc;m crawfish tại Mỹ.</p>
@@ -251,8 +251,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="image-his right"><img alt="his-2009-2"
-                                                        src=".././assets/media/wysiwyg/popeyes/his-2009-2.jpg" />
+                                                <div class="image-his right"><img style="width: 70%;height: 50%;" alt="his-2009-2" src=".././assets/media/wysiwyg/popeyes/his-2009-2.jpg">
                                                     <div class="desc">
                                                         <p>Popeyes giới thiệu nh&acirc;n vật "Annie" d&iacute; dỏm kể
                                                             c&acirc;u chuyện về Popeyes, được thu h&igrave;nh v&agrave;
@@ -287,7 +286,7 @@
                                                             Recipe&reg; tại cuộc thi National Taste Test.</p>
                                                     </div>
                                                 </div>
-                                                <div class="image-his right"><img alt="his-2011-1"
+                                                <div class="image-his right"><img style="width: 70%;height: 50%;" alt="his-2011-1"
                                                         src=".././assets/media/wysiwyg/popeyes/his-2011-1.jpg" />
                                                     <div class="desc">
                                                         <p class="align-c"><img alt="logolouisiana"
@@ -327,7 +326,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="image-his right"><img alt="his-2011-5"
+                                                <div class="image-his right"><img style="width: 70%;height: 50%;" alt="his-2011-5"
                                                         src=".././assets/media/wysiwyg/popeyes/his-2011-5.jpg" />
                                                     <div class="desc">
                                                         <p>Tổ chức Popeyes, Inc th&ocirc;ng b&aacute;o sự hợp t&aacute;c
