@@ -1,5 +1,11 @@
 <?php
 	include_once(".././ketnoi.php");
+
+	session_start();
+	if($_SESSION['email']) {
+		echo "session".$_SESSION['email'];
+		// die();
+	}
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +36,9 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">-->
 	<link rel="icon" href="../assets/media/favicon/default/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="../assets/media/favicon/default/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 	<!-- Google Tag Manager -->
 
@@ -122,7 +131,7 @@
 		//]]></script>
 </head>
 
-<body class=" cms-index-index cms-home catalog-category-view">
+<body class=" cms-index-index cms-home catalog-category-view customer-account-login">
 	<!-- Google Tag Manager (noscript) -->
 
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4GVXSK" height="0" width="0"
@@ -349,7 +358,7 @@
 						<div id="header-nav" class="skip-content">
 							<nav id="nav">
 								<ol class="nav-primary">
-									<li class="level0 nav-1 first parent"><a href="products.html"
+									<li class="level0 nav-1 first parent"><a href="?tp=product"
 											class="level0 has-children">Thực Đơn</a>
 										<ul class="level0">
 
@@ -364,68 +373,12 @@
 											<?php
 											}
 										?>
-
-											<!-- <li class="level1 nav-1-1 first"><a href="products/ala-carte.html"
-													class="level1 ">Ala carte</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-2"><a href="products/mon-moi.html"
-													class="level1 ">Món Mới</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-3"><a href="products/ga-gion-cay.html"
-													class="level1 ">Gà Giòn Cay</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-4"><a href="products/ga-gion-khong-cay.html"
-													class="level1 ">Gà Giòn Không Cay</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-5"><a href="products/tenders.html"
-													class="level1 ">Gà Giòn Không Xương</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-6"><a href="products/burgers.html"
-													class="level1 ">Bơ-Gơ</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-7"><a href="products/seafood.html"
-													class="level1 ">Hải Sản</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-8"><a href="products/phan-an-gia-dinh.html"
-													class="level1 ">Phần Ăn Gia Đình</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-9"><a href="products/thuc-uong-va-trang-mieng.html"
-													class="level1 ">Thức Uống &amp; Tráng Miệng</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-10"><a href="products/combo-com.html"
-													class="level1 ">Combo Cơm</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li>
-											<li class="level1 nav-1-11 last"><a href="products/kid-meal.html"
-													class="level1 ">KID MEAL</a></li>
-											<li class="hidden-xs"><img class="menu-separator"
-													src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
-													alt=""></li> -->
 										</ul>
 									</li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-2"><a href="story.html" class="level0 ">Về Chúng Tôi</a></li>
+									<li class="level0 nav-2"><a href="?tp=brand" class="level0 ">Thương hiệu</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
@@ -446,7 +399,7 @@
 											alt=""></li>
 									<li class="level0 nav-6 active last"><a
 											href="https://www.facebook.com/PopeyesVN/app/640050273198209/"
-											class="level0 ">E-voucher</a></li>
+											class="level0 ">Liên hệ</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
@@ -480,9 +433,15 @@
 							<div class="account-cart-wrapper">
 
 								<a href="customer/account/index.html" data-target-element="#header-account"
-									class="skip-link skip-account ">
-									<span class="icon "></span>
-									<span class="label">Account</span>
+									class="skip-link skip-account login">
+									<?php
+										if(isset($_SESSION['email'])) { ?>
+											<span class="icon login"></span>
+                       						<span class="full-name-customer"><?php echo $_SESSION['email'] ?></span>
+									<?php	} else { ?>
+											<span class="icon "></span>
+									<?php	}
+									?>
 								</a>
 								<!-- Cart -->
 								<div class="header-minicart">
@@ -650,10 +609,9 @@
 						<div id="header-account" class="skip-content">
 							<div class="links">
 								<ul>
-									<li class="first"><a href="customer/account/index.html" title="Tài khoản">Tài
-											khoản</a></li>
-									<li class=" last"><a href="customer/account/login/index.html" title="Đăng nhập">Đăng
-											nhập</a></li>
+									<li class="first"><a href="?tp=account" title="Tài khoản">Tài khoản</a></li>
+									<!-- <li class=" last"><a href="customer/account/login/index.html" title="Đăng nhập">Đăng
+											nhập</a></li> -->
 								</ul>
 							</div>
 						</div>
