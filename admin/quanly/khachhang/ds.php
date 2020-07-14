@@ -54,8 +54,8 @@
 	        	<td><?php echo $row['mat_khau']; ?></td>
 	        	<td><?php echo $row['ghi_chu']; ?></td>
 	        	<td>
-	        		<a class="btn btn-primary" href="?ql=khachhang/sua&idsua=<?php echo $row['id_khach_hang']?>">Sửa</a>
-	        		<a class="btn btn-danger" href="?ql=khachhang/ds&idxoa=<?php echo $row['id_khach_hang']?>">Xóa</a>
+	        		<a class="btn btn-outline-primary" href="?ql=khachhang/sua&idsua=<?php echo $row['id_khach_hang']?>">Sửa</a>
+	        		<a class="btn btn-outline-warning" href="?ql=khachhang/ds&idxoa=<?php echo $row['id_khach_hang']?>">Xóa</a>
 	        	</td>
 	        </tr>
 	    <?php $stt++; } ?>

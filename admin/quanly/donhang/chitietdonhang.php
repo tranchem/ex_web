@@ -2,9 +2,9 @@
     $id = $_GET['id'];
 	//Hiển thị danh sách đơn hàng
       $sql="SELECT t1.id_don_hang, t3.ten_san_pham, t1.so_luong, t1.don_gia, t1.thanh_tien
-				FROM tbl_chitietdonhang t1
-			    JOIN tbl_donhang t2 ON t1.id_don_hang = t2.id_don_hang
-			    JOIN tbl_sanpham t3 ON t1.id_san_pham = t3.id_san_pham
+				FROM tbl_chi_tiet_don_hang t1
+			    JOIN tbl_don_hang t2 ON t1.id_don_hang = t2.id_don_hang
+			    JOIN tbl_san_pham t3 ON t1.id_san_pham = t3.id_san_pham
 			    WHERE t1.id_don_hang = $id";
       $query=$connection->query($sql);
  ?>
@@ -37,6 +37,6 @@
 	    <?php $stt++; } ?>
 	    </tbody>
 	  </table> 
-	  	<a href="?ql=donhang/dsdonhang">Danh sách đơn hàng</a>
+	  	<a class="btn btn-secondary btn-lg active" href="?ql=donhang/dsdonhang">Danh sách đơn hàng</a>
 	</div>  
 </div>

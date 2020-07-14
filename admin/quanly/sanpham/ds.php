@@ -2,7 +2,7 @@
 	//xóa sản phẩm
 if(isset($_GET['idxoa'])){
      $id=$_GET['idxoa'];
-     $sql="DELETE FROM tbl_sanpham where id_san_pham=$id";
+     $sql="DELETE FROM tbl_san_pham where id_san_pham=$id";
      
      if($connection->query($sql))
      {
@@ -22,8 +22,8 @@ if(isset($_GET['idxoa'])){
  }
 
 	//Hiển thị danh sách sản phẩm
-      $sql="SELECT t1.id_san_pham, t1.ten_san_pham, t1.don_gia, t2.ten_danh_muc 
-      FROM tbl_sanpham t1 JOIN tbl_danhmuc t2 ON t1.id_danh_muc = t2.id_danh_muc";
+      $sql="SELECT t1.id_san_pham, t1.ten_san_pham, t1.don_gia, t1.mo_ta, t1.anh, t2.ten_danh_muc
+      FROM tbl_san_pham t1 JOIN tbl_danh_muc t2 ON t1.id_danh_muc = t2.id_danh_muc";
       $query=$connection->query($sql);
  ?>
 <div>
@@ -37,6 +37,8 @@ if(isset($_GET['idxoa'])){
 	        <th scope="col">Tên sản phẩm</th>
 	        <th scope="col">Đơn giá</th>
 	        <th scope="col">Danh mục</th>
+	        <th scope="col">Ảnh</th>
+	        <th scope="col">Mô tả</th>
 	        <th scope="col">Tác vụ</th>
 	        
 	      </tr>
@@ -51,6 +53,10 @@ if(isset($_GET['idxoa'])){
 	        	<td><?php echo $row['ten_san_pham']; ?></td>
 	        	<td><?php echo $row['don_gia']; ?></td>
 	        	<td><?php echo $row['ten_danh_muc']; ?></td>
+	        	<td>
+	        		<img style="height: 100px " src="uploads/<?php echo $row['anh'] ?>" alt="">
+	        	</td>
+	        	<td><?php echo $row['mo_ta']; ?></td>
 	        	<td>
 	        		<a class="btn btn-outline-primary" href="?ql=sanpham/sua&idsua=<?php echo $row['id_san_pham']?>">Sửa</a>
 	        		<a class="btn btn-outline-warning" href="?ql=sanpham/ds&idxoa=<?php echo $row['id_san_pham']?>">Xóa</a>

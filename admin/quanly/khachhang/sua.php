@@ -76,7 +76,7 @@
                      <dir>
                         <input class="btn btn-outline-warning" type="reset" value="Nhập lại" >
                         <input class="btn btn-outline-success" name="sua" type="submit" value="Cập nhật">
-                        <a href="?ql=khachhang/ds">Danh sách</a>
+                        <a class="btn btn-secondary btn-lg active" href="?ql=khachhang/ds">Danh sách khách hàng</a>
                      </dir>
                   </form>
                </div>

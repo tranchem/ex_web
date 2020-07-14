@@ -58,8 +58,8 @@ if(isset($_GET['idxoa'])){
             <td><?php echo $row['mat_khau']; ?></td>
 
             <td>
-              <a class="btn btn-warning" href="?ql=nhanvien/sua&idsua=<?php echo $row['id_nhan_vien']?>">Sửa</a>
-              <a class="btn btn-danger" href="?ql=nhanvien/ds&idxoa=<?php echo $row['id_nhan_vien']?>">Xóa</a>
+              <a class="btn btn-outline-primary" href="?ql=nhanvien/sua&idsua=<?php echo $row['id_nhan_vien']?>">Sửa</a>
+              <a class="btn btn-outline-warning" href="?ql=nhanvien/ds&idxoa=<?php echo $row['id_nhan_vien']?>">Xóa</a>
             </td>
           </tr>
       <?php } ?>

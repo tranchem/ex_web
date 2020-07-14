@@ -113,7 +113,7 @@ if(isset($_POST['them']))
       <div>
          <input class="btn btn-outline-default" type="reset" value ="Nhập lại">
          <input class="btn btn-outline-default" name="them" type="submit" value ="Thêm mới">
-         <a href="?ql=nhanvien/ds">Danh sách nhân viên</a>
+         <a class="btn btn-secondary btn-lg active" href="?ql=nhanvien/ds">Danh sách nhân viên</a>
       </div>
    </div>
 </div>

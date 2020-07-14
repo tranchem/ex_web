@@ -4,113 +4,111 @@ if(isset($_POST['sua']))
 {
 	//kiểm tra thông tin
 	$tensanpham=$_POST['tensanpham'];
-	$hople=true;
-	$message = "";
-	if($tensanpham=="")
-	{
-		$hople=false;
-		$message .= "<div>Bạn chưa nhập tên sản phẩm</div>";
-    }
+  $dongia = $_POST['dongia'];
+  $danhmuc= $_POST['danhmuc'];
+  $mota = $_POST['mota'];
+  $anh = $_FILES['anh']['name'];
 
-	$dongia=$_POST['dongia'];
-	if($dongia=="")
-	{
-		$hople = false;
-		$message .= "<div>Bạn chưa nhập đơn giá</div>";
-	}
+	if ($tensanpham==""){
+      echo  "<div class='alert alert-danger' role='alert'>
+    <strong>Vui lòng nhập đủ thông tin !!!</strong>
+</div>";
+	}else {
+     $sql = "UPDATE tbl_san_pham SET ten_san_pham = '$tensanpham', don_gia = '$dongia', anh = '$anh', mo_ta = '$mota', id_danh_muc='$danhmuc' WHERE id_san_pham = $id";
 
-	$matkhau=$_POST['madanhmuc'];
-	if($matkhau=="")		
-	{
-		$hople = false;
-		$message .= "<div>Bạn chưa chọn mã danh mục</div>";
-	}
-
-	if($hople == false) {
-		echo "<div class='alert alert-danger' role='alert'>
-		             <strong>".$message."</strong>
-				</div>";
-	}
-	else {
-	//cập nhật dữ liệu
-   	
-     //  $sql="UPDATE tbl_nhanvien  
-     //  SET ten_nhan_vien = $tennhanvien ,email  = $email,sodt = $sodienthoai,tai_khoan = $taikhoan,mat_khau = $matkhau,dia_chi = $diachi
-     // WHERE id_nhan_vien=$id ";
-     $sql = "
-         UPDATE tbl_sanpham
-         SET
-            ten_san_pham = '".$tensanpham."',
-            don_gia = '".$dongia."',
-            id_danh_muc = '".$madanhmuc."'
-         WHERE id_san_pham = '".$id."' 
-      ";
-
+     move_uploaded_file($_FILES['anh']['tmp_name'], "uploads/".$anh);
 
 		if($connection->query($sql))
      {
-     	echo "cập nhật thành công";
-     }
-
-         else
+     	echo "<div class='alert alert-success' role='alert'>
+    <strong>Cập nhật thành công</strong>
+</div>";
+     }else
          {
-         	echo "cập nhật thất bại";
+         	echo "<div class='alert alert-success' role='alert'>
+    <strong>Cập nhật thất bại</strong>
+</div>";
          }
 
 	}
 
 }     
         //hiển thị dữ liệu cần sửa 
-       $sql="SELECT * from tbl_sanpham where id_san_pham=$id";
+       $sql="SELECT t1.ten_san_pham, t1.don_gia, t1.mo_ta, t1.anh, t2.ten_danh_muc
+      FROM tbl_san_pham t1 JOIN tbl_danh_muc t2 ON t1.id_danh_muc = t2.id_danh_muc WHERE id_san_pham = $id";
        $query=$connection->query($sql);
        $row=$query->fetch_assoc();
 
    ?>
 
 <div>
-<h1> Cập nhật nhân viên </h1>
-<div class="card bg-secondary shadow">
-<div class="card-body">
-   <form method="POST">
-   <h6 class="heading-small text-muted mb-4">Thông tin sản phẩm</h6>
-   <div class="pl-lg-4">
+<h1>Cập nhật sản phẩm</h1>
+   <div class=" mt--7" style="
+      padding-top: 70px;
+      ">
       <div class="row">
-         <div class="col-lg-6">
-            <div class="form-group focused">
-               <label class="form-control-label" for="input-username">Tên sản phẩm</label>
-               <input name="tensanpham" type="text" id="input-username" class="form-control form-control-alternative" value="<?php echo $row['ten_san_pham'] ?>" >
+         <div class="">
+         </div>
+         <div class="col-xl-12 order-xl-1">
+            <div class="shadow">
+               <div class="card-body">
+                  <form method="POST" enctype="multipart/form-data">
+                     <div class="">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="form-group">
+                                 <label class="form-control-label" for="input-username">Tên sản phẩm</label>
+                                 <input name="tensanpham" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Tên sản phẩm" value="<?php echo $row['ten_san_pham'] ?>">
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="form-group">
+                                 <label class="form-control-label" for="input-username">Đơn giá</label>
+                                 <input name="dongia" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Đơn giá" value="<?php echo $row['don_gia'] ?>">
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="form-group focused">
+                                 <label class="form-control-label" for="input-username">Chọn ảnh</label>
+                                 <input name="anh" type='file' id="imgInp" /><br>
+                                 <img style="height: 200px" id="blah" src="" />
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                           <div class="form-group focused">
+                               <label class="form-control-label" for="input-username">Danh mục</label>
+                               <select class="form-control form-control-alternative" name="danhmuc" id="">
+                                 <option value="">---Chọn danh mục---</option>
+                                 <?php
+                                    $sql_dm = "SELECT * FROM tbl_danh_muc";
+                                    $query_dm = $connection->query($sql_dm);
+                                    while ($row_dm=$query_dm->fetch_assoc()) {
+                                    
+                                  ?>
+                                  <option value="<?php echo $row_dm['id_danh_muc'] ?>">
+                                    <?php echo $row_dm['ten_danh_muc'] ?></option>
+                                  <?php } ?>
+                               </select>
+                            </div>
+                    </div>
+
+                           <div class="col-lg-12">
+                              <div class="form-group">
+                                 <label class="form-control-label" for="input-username">Mô tả</label>
+                                 <input name="mota" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Tên danh mục" value="<?php echo $row['ten_danh_muc'] ?>">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <dir>
+                        <input class="btn btn-outline-warning" type="reset" value="Nhập lại" >
+                        <input class="btn btn-outline-success" name="sua" type="submit" value="Cập nhật">
+                        <a href="?ql=sanpham/ds">Danh sách sản phẩm</a>
+                     </dir>
+                  </form>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="row">
-         <div class="col-lg-6">
-            <div class="form-group focused">
-               <label class="form-control-label" for="input-first-name">Đơn giá</label>
-               <input name="dongia" type="text" id="input-first-name" class="form-control form-control-alternative"value="<?php echo $row['don_gia'] ?>" >
-            </div>
-         </div>
-         <div class="col-lg-6">
-            <div class="form-group focused">
-               <label class="form-control-label" for="input-username">Danh mục</label>
-               <select class="form-control form-control-alternative" name="danhmuc" id="">
-                 <option value="">---Chọn danh mục---</option>
-                 <?php
-                    $sql_dm = "SELECT * FROM tbl_danhmuc";
-                    $query_dm = $connection->query($sql_dm);
-                    while ($row_dm=$query_dm->fetch_assoc()) {
-                    
-                  ?>
-                  <option value="<?php echo $row_dm['id_danh_muc'] ?>">
-                    <?php echo $row_dm['ten_danh_muc'] ?></option>
-                  <?php } ?>
-               </select>
-            </div>
-         </div>
-      </div>
-      <div>
-         <input class="btn btn-outline-default" type="reset" value ="Nhập lại">
-         <input class="btn btn-outline-default" name="sua" type="submit" value ="Cập nhật">
-         <a href="?ql=nhanvien/ds">Danh sách sản phẩm</a>
       </div>
    </div>
 </div>
