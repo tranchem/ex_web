@@ -3,7 +3,7 @@
 
 	session_start();
 	if($_SESSION['email']) {
-		echo "session".$_SESSION['email'];
+		// echo "session".$_SESSION['email'];
 		// die();
 	}
 ?>
@@ -432,17 +432,37 @@
 
 							<div class="account-cart-wrapper">
 
-								<a href="customer/account/index.html" data-target-element="#header-account"
-									class="skip-link skip-account login">
-									<?php
-										if(isset($_SESSION['email'])) { ?>
-											<span class="icon login"></span>
-                       						<span class="full-name-customer"><?php echo $_SESSION['email'] ?></span>
-									<?php	} else { ?>
-											<span class="icon "></span>
-									<?php	}
-									?>
+							<?php
+							if(isset($_SESSION['email'])) { ?>
+								<a href="customer/account/index.html" data-target-element="#header-account" class="skip-link skip-account login">
+									<span class="icon login"></span>
+									<span class="full-name-customer"><?php echo $_SESSION['email'] ?></span>
 								</a>
+								<!-- Account -->
+
+								<div id="header-account" class="skip-content">
+									<div class="links">
+										<ul>
+											<li class="first"><a href="?tp=logout" title="Tài khoản">Đăng xuất</a></li>
+											<!-- <li class=" last"><a href="customer/account/login/index.html" title="Đăng nhập">Đăng
+													nhập</a></li> -->
+										</ul>
+									</div>
+								</div>
+							<?php } else { ?>
+								<a href="customer/account/index.html" data-target-element="#header-account" class="skip-link skip-account">
+									<span class="icon"></span>
+								</a>
+								<div id="header-account" class="skip-content">
+									<div class="links">
+										<ul>
+											<li class="first"><a href="?tp=account" title="Tài khoản">Tài khoản</a></li>
+											<!-- <li class=" last"><a href="customer/account/login/index.html" title="Đăng nhập">Đăng
+													nhập</a></li> -->
+										</ul>
+									</div>
+								</div>
+							<?php } ?>
 								<!-- Cart -->
 								<div class="header-minicart">
 
@@ -604,17 +624,7 @@
 							</div>
 						</div>
 
-						<!-- Account -->
-
-						<div id="header-account" class="skip-content">
-							<div class="links">
-								<ul>
-									<li class="first"><a href="?tp=account" title="Tài khoản">Tài khoản</a></li>
-									<!-- <li class=" last"><a href="customer/account/login/index.html" title="Đăng nhập">Đăng
-											nhập</a></li> -->
-								</ul>
-							</div>
-						</div>
+						
 					</div>
 					<ul id="multiple-language"
 						class="nav navbar-nav navbar-right navbar-inverse hidden-xs language_block">

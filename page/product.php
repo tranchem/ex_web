@@ -74,12 +74,12 @@
 										</div>
 									</div>
 									<div class="actions">
-										<button id="GCT_CB94" type="button" title="Đặt mua"
+										<a id="GCT_CB94" type="button" title="Đặt mua"
 											class="button btn-cart btn-bundle"
-											onclick="setLocation('../mon-moi/gct-cb944df8.html?options=cart')"
+											href="./?tp=order&product_id=<?php echo $row['id_san_pham'] ?>"
 											>
 											Đặt mua
-										</button>
+							</a>
 									</div>
 								</div>
 							</li>
