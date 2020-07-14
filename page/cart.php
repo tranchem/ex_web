@@ -108,7 +108,7 @@
                                                                 <td
                                                                     class="features-product-table features-product-table-remove">
                                                                     <div class="col-md-5">
-                                                                        <a href="?tp=delete_item_in_cart" title="Xoá sản phẩm này">
+                                                                        <a href="?tp=delete_item_in_cart&product_id=<?php echo $row['id_san_pham'] ?>" title="Xoá sản phẩm này">
                                                                             <p class="icon-trash">#</p>
                                                                         </a>
                                                                     </div>

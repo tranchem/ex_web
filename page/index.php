@@ -358,7 +358,7 @@
 						<div id="header-nav" class="skip-content">
 							<nav id="nav">
 								<ol class="nav-primary">
-									<li class="level0 nav-1 first parent"><a href="?tp=product"
+									<li class="level0 nav-1 first parent"><a
 											class="level0 has-children">Thực Đơn</a>
 										<ul class="level0">
 

@@ -30,7 +30,7 @@
 			?>
 			<div class="container banner_category">
 				<div class="bg_banner_category clearfix">
-					<div class="banner-head"><img alt="" src="<?php echo $danh_muc['anh'] ?>" /></div>
+					<div class="banner-head"><img alt="" src=".././admin/uploads/<?php echo $danh_muc['anh'] ?>" /></div>
 				</div>
 			</div>
 			<div class="page-title category-title container banner_category text-center">
@@ -53,7 +53,7 @@
 							<li class="item last">
 								<div class="product-head">
 									<img id="product-collection-image-211"
-										src="<?php echo $row["anh"] ?>"
+										src=".././admin/uploads/<?php echo $row["anh"] ?>"
 										alt="<?php echo $row["ten_san_pham"] ?>" />
 
 									<div class="description">
