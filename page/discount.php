@@ -21,7 +21,7 @@ Hãy khám phá những chương trình khuyến mãi, các món ăn mới nhấ
                             <div class="item-promotion">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="https://popeyes.vn/mua-2-tang.html/" target="_blank" title="">
+                        
                             <figure class="image-item">
                                 <img alt="promotion_image_0" src="https://popeyes.vn/media/images/promo_2006_m2t3-v.jpg">
                             </figure>
@@ -32,14 +32,13 @@ Hãy khám phá những chương trình khuyến mãi, các món ăn mới nhấ
                                 <div class="item-promotion">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="https://popeyes.vn/uu-dai-gio-vang-giam-50-cho-combo-ga-gion-khong-xuon.html/" target="_blank" title="">
+                       
                             <figure class="image-item">
                                 <img alt="promotion_image_1" src="https://popeyes.vn/media/images/promo_1804_happyhour.jpg">
                             </figure>
                         </a>
                     </div>
                 </div>
-                                                    <a class="link-additional" href="https://popeyes.vn/products/tenders.html/?name=HAPPY-HOUR" id="link-additional-1">Đặt hàng</a>
                             </div>
                                 <div class="item-promotion">
                 <div class="row">
@@ -55,7 +54,7 @@ Hãy khám phá những chương trình khuyến mãi, các món ăn mới nhấ
                                 <div class="item-promotion">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="https://popeyes.vn/thu-4-mua-1-tang-1.html/" target="_blank" title="">
+                        
                             <figure class="image-item">
                                 <img alt="promotion_image_3" src="https://popeyes.vn/media/images/promo_1000x400_m1t1.jpg">
                             </figure>

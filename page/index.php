@@ -6,17 +6,9 @@
 
 <!DOCTYPE html>
 
-<!--[if lt IE 7 ]> <html lang="vi" id="top" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="vi" id="top" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="vi" id="top" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="vi" id="top" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
+
 <html lang="vi" id="top" class="no-js">
-<!--<![endif]-->
 
-
-<!-- Mirrored from popeyes.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Jun 2020 02:55:11 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
@@ -51,25 +43,13 @@
 
 		})(window, document, 'script', 'dataLayer', 'GTM-W4GVXSK');</script>
 
-	<!-- End Google Tag Manager -->
-
-	<!--[if lt IE 7]>
-<script type="text/javascript">
-//<![CDATA[
-	var BLANK_URL = 'https://popeyes.vn/js/blank.html';
-	var BLANK_IMG = 'https://popeyes.vn/js/spacer.gif';
-//]]>
-</script>
-<![endif]-->
+	
 	<link rel="stylesheet" type="text/css" href="../assets/media/css_secure/e6e4151db170212c721b127019f56dbf.css" />
 	<link rel="stylesheet" type="text/css" href="../assets/media/css_secure/b0d870d61b23058c8faff3d85012bf2f.css"
 		media="all" />
 	<script type="text/javascript" src="../assets/media/js/ff98acb68a2f5ee0ffa6f735a2bc5bf1.js"></script>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300,400,500,700,600" />
-	<!--[if  (lte IE 8) & (!IEMobile)]>
-<link rel="stylesheet" type="text/css" href="https://popeyes.vn/../assets/media/css_secure/d4630e1f24cdd8f484eb0c3e179e8017.css" media="all" />
-<![endif]-->
-	<!--[if (gte IE 9) | (IEMobile)]><!-->
+	
 	<link rel="stylesheet" type="text/css" href="../assets/media/css_secure/a22e1f688685d5f9bce258ffdec9ed55.css"
 		media="all" />
 	<!--<![endif]-->
@@ -128,12 +108,11 @@
 </head>
 
 <body class=" cms-index-index cms-home catalog-category-view customer-account-login">
-	<!-- Google Tag Manager (noscript) -->
-
+	
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4GVXSK" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 
-	<!-- End Google Tag Manager (noscript) -->
+
 	<div class="wrapper">
 		<noscript>
 			<div class="global-site-notice noscript">
@@ -247,19 +226,9 @@
 							</nav>
 
 						</div>
-						<!-- <a class="giaohang_mobile" href="https://popeyes.vn/giaohang/">
-				<img alt="giaohang-mobile" src="https://popeyes.vn/../assets/skin/frontend/rwd/popeyes/images/giaohang-mobile.png" width="92" height="35">
-			</a>
-
-			<a class="phone_mobile" href="https://popeyes.vn/giaohang/">
-				<img alt="phone-mobile" src="https://popeyes.vn/../assets/skin/frontend/rwd/popeyes/images/phone-mobile.png" width="92" height="14">
-			</a> -->
+						
 						<h1 style="margin:0;"></h1>
-						<!--<div class="store-language-container">-->
-
-						<!--</div>-->
-						<!--<div class="store-language-container"></div>-->
-						<!-- Skip Links -->
+						
 						<div class="skip-links">
 							<a href="#header-nav" class="skip-link skip-nav">
 								<span class="icon"></span>
@@ -532,11 +501,8 @@
 						<div class="row">
 							<div class="col-md-7 clearfix">
 								<div class="row clearfix">
-									<p><a href="contact-us/index.html">Li&ecirc;n Hệ</a></p>
-									<p><a href="https://www.mypopeyesfeedback.com/vnm?AspxAutoDetectCookieSupport=1">&Yacute;
-											kiến phản hồi</a></p>
-									<p><a href="popeyes-policy/index.html">Điều khoản &amp; Ch&iacute;nh s&aacute;ch</a>
-									</p>
+									<p><a href="contact.php">Li&ecirc;n Hệ</a></p>
+									
 								</div>
 								<div class="row clearfix">
 									<div class="col-sm-3 padding5 clearfix wrap-social">

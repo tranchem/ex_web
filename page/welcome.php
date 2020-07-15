@@ -2,11 +2,11 @@
     <div class="camera_wrap camera_coffee_skin" id="camera_wrap_1">
         <div data-thumb="https://popeyes.vn/media/mbimages/thumbs/mbimages/1/3/1349x580-min.jpg"
             data-src="https://popeyes.vn/media/mbimages/1/3/1349x580-min.jpg"
-            data-link="https://popeyes.vn/products/mon-moi.html" data-target="_self">
+            data-link="" data-target="_self">
         </div>
         <div data-thumb="https://popeyes.vn/media/mbimages/thumbs/mbimages/h/o/home_2005_app.jpg"
             data-src="https://popeyes.vn/media/mbimages/h/o/home_2005_app.jpg"
-            data-link="https://popeyes.vn/apptracking?store=vp" data-target="_self">
+            data-link="" data-target="_self">
         </div>
 
     </div>
