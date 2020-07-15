@@ -22,8 +22,8 @@
 				</div>";
 			}
 			else{
-				$matkhau = md5($matkhau);
-				$sql = "SELECT * FROM tbl_nhanvien WHERE tai_khoan = '$taikhoan' AND mat_khau = '$matkhau'";
+				//$matkhau = md5($matkhau);
+				$sql = "SELECT * FROM tbl_nhan_vien WHERE tai_khoan = '$taikhoan' AND mat_khau = '$matkhau'";
 				$query = $connection->query($sql);
 				if(mysqli_num_rows($query = $connection->query($sql))>0){
 					//Tài khoản và mật khẩu nhập đúng

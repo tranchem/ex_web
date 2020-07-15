@@ -54,6 +54,7 @@
                                  <input name="ten_danh_muc" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Tên danh mục" value="<?php echo $row['ten_danh_muc'] ?>">
                               </div>
                            </div>
+
                            <div class="col-lg-12">
                               <div class="form-group focused">
                                  <label class="form-control-label" for="input-username">Chọn ảnh</label>
@@ -65,7 +66,7 @@
                            <div class="col-lg-12">
                               <div class="form-group">
                                  <label class="form-control-label" for="input-username">Mô tả</label>
-                                 <input name="mota" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Tên danh mục" value="<?php echo $row['ten_danh_muc'] ?>">
+                                 <input name="mota" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Mô tả" value="<?php echo $row['mo_ta'] ?>">
                               </div>
                            </div>
                         </div>

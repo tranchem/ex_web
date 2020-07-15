@@ -1,6 +1,15 @@
 <?php 
 include_once("ketnoi.php");
+
+if(!session_start())
+    session_start();
+  
+  //Nếu chưa đăng nhập thì tự động điều hướng đến trang đăng nhập
+  if(!isset($_SESSION['tk']))
+    header("location:dangnhap.php")
+
  ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -32,8 +41,8 @@ include_once("ketnoi.php");
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href=".popeyes/page/index.php">
-        <img style="width: 300px; height: 100px" src="./assets/img/brand/logo.jpg" class="navbar-brand-img" alt="...">
+      <a class="navbar-brand pt-0" href="./index.html">
+        <img src="./assets/img/brand/popeyes-logo-vector.png" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -116,7 +125,7 @@ include_once("ketnoi.php");
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="?ql=trangchu/indexadmin">
               <i class="ni ni-tv-2 text-primary"></i> Trang chủ
             </a>
           </li>
@@ -139,13 +148,6 @@ include_once("ketnoi.php");
           <li class="nav-item">
             <a class="nav-link" href="?ql=khachhang/ds">
               <i class="ni ni-single-02 text-yellow"></i> Khách hàng
-
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="?ql=slideshow/ds">
-              <i class="ni ni-image text-black"></i> Bộ trình ảnh
 
             </a>
           </li>
@@ -181,14 +183,14 @@ include_once("ketnoi.php");
                   <img alt="Image placeholder" src="./assets/img/theme/team-4-800x800.jpg">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold"> VIỆT DART</span>
+                  <span class="mb-0 text-sm  font-weight-bold"> Quản trị viên</span>
                 </div>
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
               
           
-              <a href="#!" class="dropdown-item">
+              <a href="dangxuat.php" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Đăng xuất</span>
               </a>

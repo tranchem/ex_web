@@ -10,8 +10,6 @@ if(isset($_POST['sua']))
   {
     $hople=false;
     $message .= "<div>Bạn chưa nhập tên nhân viên</div>";
-  
-     
     }
 
   $email=$_POST['email'];
@@ -58,24 +56,25 @@ if(isset($_POST['sua']))
      //  SET ten_nhan_vien = $tennhanvien ,email  = $email,sodt = $sodienthoai,tai_khoan = $taikhoan,mat_khau = $matkhau,dia_chi = $diachi
      // WHERE id_nhan_vien=$id ";
      $sql = "
-         UPDATE `tbl_nhanvien`
+         UPDATE `tbl_nhan_vien`
          SET
             `ten_nhan_vien` = '".$tennhanvien."',
             `email` = '".$email."',
-            `sodt` = '".$sodienthoai."',
-            `tai_khoan` = '".$taikhoan."'
+            `so_dien_thoai` = '".$sodienthoai."',
+            `tai_khoan` = '".$taikhoan."',
+            `mat_khau` = '".$matkhau."'
          WHERE `id_nhan_vien` = '".$id."' 
       ";
 
 
     if($connection->query($sql))
      {
-      echo "cập nhật thành công";
+      echo "Cập nhật thành công";
      }
 
          else
          {
-          echo "cập nhật thất bại";
+          echo "Cập nhật thất bại";
          }
 
   }
@@ -113,7 +112,7 @@ if(isset($_POST['sua']))
          <div class="col-lg-6">
             <div class="form-group focused">
                <label class="form-control-label" for="input-first-name">Số điện thoại</label>
-               <input name="sodienthoai" type="text" id="input-first-name" class="form-control form-control-alternative"value="<?php echo $row['sodt'] ?>" >
+               <input name="sodienthoai" type="text" id="input-first-name" class="form-control form-control-alternative"value="<?php echo $row['so_dien_thoai'] ?>" >
             </div>
          </div>
       </div>

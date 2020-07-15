@@ -62,7 +62,7 @@ if(isset($_GET['idxoa'])){
               <a class="btn btn-outline-warning" href="?ql=nhanvien/ds&idxoa=<?php echo $row['id_nhan_vien']?>">Xóa</a>
             </td>
           </tr>
-      <?php } ?>
+          <?php $stt++; } ?>
       </tbody>
     </table> 
 </div>
