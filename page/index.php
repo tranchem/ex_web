@@ -202,23 +202,24 @@
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-3 active"><a href="promotions/index.html"
-											class="level0 ">Khuyến mãi</a></li>
+									<li class="level0 nav-3 active"><a href="?tp=discount"
+									class="level0 ">Khuyến mãi</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-4 active"><a href="store.html/index.html" class="level0 ">Cửa
+									<li class="level0 nav-4 active"><a href="?tp=store" class="level0 ">Cửa
 											hàng</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-5 active"><a href="career/index.html" class="level0 ">Tuyển
+									<li class="level0 nav-5 active"><a href="?tp=career" class="level0 ">Tuyển
 											dụng</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-6 active last"><a href="?tp=contact" class="level0 ">Liên
-											hệ</a></li>
+									<li class="level0 nav-6 active last"><a
+											href="?tp=contact"
+											class="level0 ">Liên hệ</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
