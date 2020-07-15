@@ -47,7 +47,7 @@
                                         $result = $connection->query($sql);
                                         while ($row = mysqli_fetch_array($result)) { ?>
                                             <div class="col-md-4">
-                                                <a class="wrap-sub-category" href="./?tp=product&cate=<?php echo $row['id_dan_muc'] ?>">
+                                                <a class="wrap-sub-category" href="./?tp=product&cate=<?php echo $row['id_danh_muc'] ?>">
                                                     <div class="sub-category">
                                                         <div class="img-sub-category">
                                                             <img width="230" height="230" alt="Ala carte" src=".././admin/uploads/<?php echo $row['anh'] ?>"

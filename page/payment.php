@@ -34,7 +34,7 @@
             $connection->query($sql);
         }
     
-        session_destroy();
+        unset($_SESSION['san_phams']);
     
         echo "
             <script>

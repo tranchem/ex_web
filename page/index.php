@@ -225,7 +225,6 @@
 											alt=""></li>
 								</ol>
 							</nav>
-
 						</div>
 						
 						<h1 style="margin:0;"></h1>
