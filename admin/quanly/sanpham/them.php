@@ -15,9 +15,13 @@
 			move_uploaded_file($_FILES['anh']['tmp_name'], "uploads/".$anh);
 
 			if ($connection->query($sql)) 
-				echo "Thêm thành công";
+				echo "<div class='alert alert-success' role='alert'>
+				<strong>Thêm thành công</strong>
+			</div>";
 			else
-				echo "Thêm thất bại";
+				echo "<div class='alert alert-danger' role='alert'>
+				<strong>Thêm thất bại</strong>
+			</div>";
 		}
 	}
 ?>

@@ -55,12 +55,16 @@ if(isset($_POST['them']))
 		$sql="INSERT INTO tbl_nhan_vien (ten_nhan_vien, email, so_dien_thoai, tai_khoan, mat_khau) VALUES ('$tennhanvien','$email','$sodienthoai','$taikhoan','$matkhau') ";
 		if($connection->query($sql))
      {
-     	echo "Thêm thành công";
+     	echo "<div class='alert alert-success' role='alert'>
+        <strong>Thêm thành công</strong>
+    </div>";
      }
 
          else
          {
-         	echo "Thêm thất bại";
+         	echo "<div class='alert alert-danger' role='alert'>
+            <strong>Thêm thất bại</strong>
+        </div>";
          }
 	}
 

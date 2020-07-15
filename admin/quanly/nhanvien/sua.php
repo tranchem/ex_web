@@ -69,12 +69,16 @@ if(isset($_POST['sua']))
 
     if($connection->query($sql))
      {
-      echo "Cập nhật thành công";
+      echo "<div class='alert alert-success' role='alert'>
+      <strong>Cập nhật thành công</strong>
+  </div>";
      }
 
          else
          {
-          echo "Cập nhật thất bại";
+          echo "<div class='alert alert-danger' role='alert'>
+          <strong>Cập nhật thất bại</strong>
+      </div>";
          }
 
   }

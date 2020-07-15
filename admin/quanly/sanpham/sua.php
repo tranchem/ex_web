@@ -3,11 +3,11 @@ $id=$_GET['idsua'];
 if(isset($_POST['sua']))
 {
 	//kiểm tra thông tin
-	$tensanpham=$_POST['tensanpham'];
-  $dongia = $_POST['dongia'];
-  $danhmuc= $_POST['danhmuc'];
-  $mota = $_POST['mota'];
-  $anh = $_FILES['anh']['name'];
+   $tensanpham=$_POST['tensanpham'];
+   $dongia = $_POST['dongia'];
+   $danhmuc= $_POST['danhmuc'];
+   $mota = $_POST['mota'];
+   $anh = $_FILES['anh']['name'];
 
 	if ($tensanpham==""){
       echo  "<div class='alert alert-danger' role='alert'>
@@ -25,7 +25,7 @@ if(isset($_POST['sua']))
 </div>";
      }else
          {
-         	echo "<div class='alert alert-success' role='alert'>
+         	echo "<div class='alert alert-danger' role='alert'>
     <strong>Cập nhật thất bại</strong>
 </div>";
          }
@@ -95,7 +95,7 @@ if(isset($_POST['sua']))
                            <div class="col-lg-12">
                               <div class="form-group">
                                  <label class="form-control-label" for="input-username">Mô tả</label>
-                                 <input name="mota" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Tên danh mục" value="<?php echo $row['ten_danh_muc'] ?>">
+                                 <input name="mota" type="text" id="input-username" class="form-control form-control-alternative" placeholder="Mô tả" value="<?php echo $row['mo_ta'] ?>">
                               </div>
                            </div>
                         </div>
