@@ -22,7 +22,7 @@
         }
 
         if($idx == 0) {
-            echo "khog trung";
+            // echo "khog trung";
             $sql = "
                 SELECT *
                 FROM tbl_san_pham
@@ -60,7 +60,7 @@
 
     // echo $_SESSION['san_phams'][1]['ten_san_pham'];
 
-    var_dump($_SESSION['san_phams']);
+    // var_dump($_SESSION['san_phams']);
 
 
     echo "

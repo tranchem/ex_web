@@ -75,7 +75,7 @@
                                                                 <td>
                                                                     <div class="col-md-12">
                                                                         <a class="product-image col-md-4">
-                                                                            <img src="<?php echo $row['anh'] ?>"
+                                                                            <img width="70" height="70" src=".././admin/uploads/<?php echo $row['anh'] ?>"
                                                                                 alt="<?php echo $row['ten_san_pham'] ?>">
                                                                             </a>
                                                                         <div class="col-md-8 clearfix">
@@ -169,12 +169,12 @@
                                                 <ul class="checkout-types minicart">
                                                     <li>
                                                         <a title="Tiếp tục mua" class="button btn-continue-shopping "
-                                                            href="https://popeyes.vn/products/">
+                                                            href="./?tp=menu">
                                                             Tiếp tục mua </a>
-                                                        <button title="Thanh toán" type="submit"
+                                                        <button title="Đặt hàng" type="submit"
                                                             class="button checkout-button"
                                                         >
-                                                            Thanh toán </button>
+                                                            Đặt hàng </button>
                                                     </li>
                                                 </ul>
                                             </div>

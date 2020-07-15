@@ -2,10 +2,6 @@
 	include_once(".././ketnoi.php");
 
 	session_start();
-	if($_SESSION['email']) {
-		// echo "session".$_SESSION['email'];
-		// die();
-	}
 ?>
 
 <!DOCTYPE html>
@@ -37,8 +33,8 @@
 	<link rel="icon" href="../assets/media/favicon/default/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="../assets/media/favicon/default/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 	<!-- Google Tag Manager -->
 
@@ -154,162 +150,6 @@
 				<img src="../assets/skin/frontend/rwd/popeyes/images/Pacman.gif"
 					alt="Đang xử lý dữ liệu để qua bước sau..." title="Đang xử lý dữ liệu để qua bước sau..."
 					class="v-middle" /> Đang xử lý dữ liệu để qua bước sau...</div>
-			<div id="popup-wrapper" style="display: none;">
-				<div class="career-popup-overlay" id="popup-overlay" style="display: none;"></div>
-
-				<a id="open-minicart-mobile" href="checkout/cart/index.html" data-target-element="#header-cart"
-					class="skip-link skip-cart  no-count ">
-					<span class="icon "></span>
-					<span class="label">Cart</span>
-					<span class="minicart-subtotal">0 ₫</span>
-				</a>
-
-				<a id="open-popup" class="skip-link skip-cart  no-count">
-					<span class="icon "></span>
-					<span class="label">Cart</span>
-					<span class="minicart-subtotal">0 ₫</span>
-				</a>
-
-				<div id="header-cart" class="block block-cart skip-content">
-
-					<div class="loading-popup">
-						<img src="../assets/skin/frontend/rwd/popeyes/images/Pacman.gif"
-							alt="Đang xử lý dữ liệu để qua bước sau..." title="Đang xử lý dữ liệu để qua bước sau..."
-							class="v-middle" />
-					</div>
-					<div class="block-subtitle clearfix">
-						<h3>Phần ăn bạn đã chọn</h3>
-						<a id="popup-cart-close" onclick="openPopup()" href="#" title="Đóng">&times;</a>
-					</div>
-					<div class="minicart-wrapper">
-						<div id="minicart-error-message" class="minicart-message"></div>
-						<div id="minicart-success-message" class="minicart-message"></div>
-						<p class="empty">Không có sản phẩm nào</p>
-					</div>
-					<script>
-						current_price_promo = 0;
-						function qtyValidate(qty, obj, $btn_update) {
-							var btnChange = jQuery(obj).parent('.product-qty-table').parent('tr').find('#change-food');
-							jQuery($btn_update).trigger("click");
-							screen = jQuery(window).width();
-							if (screen > 992) {
-								jQuery('.loading-popup').css('display', 'block');
-							}
-						}
-						function validateSubotal() {
-							var subtotal = 0;
-							if (subtotal < 100000) {
-								jQuery('.minicart-actions .checkout-button').css({
-									'pointer-events': 'none',
-									'opacity': '0.3'
-								});
-							} else {
-								jQuery('.minicart-actions .checkout-button').css({
-									'pointer-events': 'intitial',
-									'opacity': 'intitial'
-								});
-							}
-						}
-						function showMessage(event) {
-							event.preventDefault();
-							alert('Đơn hàng của quý khách chưa đủ 100.000₫ ,quý khách vui lòng đặt hàng thêm để có thể thanh toán.');
-						}
-						function checkDeliveryTime() {
-							var dt = new Date();
-							var minutes = dt.getMinutes();
-							var minutes = minutes < 10 ? '0' + minutes : minutes;
-							var curr_time = dt.getHours() + ":" + minutes;
-
-							var curt = new Date("November 13, 2013 " + curr_time);
-							curt = curt.getTime();
-							//start time
-							var start_time = "10:00";
-							//convert both time into timestamp
-							var stt = new Date("November 13, 2013 " + start_time);
-							stt = stt.getTime();
-
-							//end time
-							var end_time = "21:00";
-
-							var endt = new Date("November 13, 2013 " + end_time);
-							endt = endt.getTime();
-
-							if (!(stt <= curt && curt < endt)) {
-								event.preventDefault();
-								alert('Popeyes nhận giao hàng từ 10:00 - 21:00. Quý khách vui lòng đặt hàng trong khung giờ từ 10:00 - 21:00 hằng ngày');
-							}
-
-							var GrandTotal = parseInt(0);
-							if (GrandTotal >= 500000) {
-								if (current_price_promo) {
-									event.preventDefault();
-									alert(Translator.translate('The total value of promotional products must be less than VND 500.000.'));
-								}
-							}
-						}
-						jQuery(document).ready(function () {
-							//validateSubotal();
-							//        jQuery('.product-qty-table input.cart-item-quantity').on('keyup', function (ev) {
-							//            var qty = jQuery(this).val();
-							//            var div = jQuery(this).parent('.col-md-12').parent('.product-qty-table').find(".notifi");
-							//            var $btn_update = jQuery(this).parent().find(".quantity-button");
-							//            qtyValidate(qty, div, $btn_update);
-							//        });
-							jQuery('#popup-cart-close').click(function () {
-								jQuery('#popup-wrapper').fadeOut();
-								jQuery('#header-cart').fadeOut();
-								jQuery('#popup-overlay').fadeOut();
-							});
-
-							var price_promo = current_price_promo;
-							var price_product_current_popup = 0;
-							jQuery(".product-qty-table .button").unbind().click(function () {
-								var product_price = jQuery(this).parent().find('#product_price_in_cart').val();
-								var $button = jQuery(this);
-								var oldValue = $button.parent().find(".cart-item-quantity").val();
-								var $btn_update = $button.parent().find(".quantity-button");
-								if ($button.text() == "+") {
-									var newVal = parseFloat(oldValue) + 1;
-									price_product_current_popup = 1 * product_price;
-								} else {
-									// Don't allow decrementing below zero
-									if (oldValue > 1) {
-										var newVal = parseFloat(oldValue) - 1;
-										price_product_current_popup = -1 * product_price;
-									}
-								}
-								if (newVal > 0) {
-									price_promo = current_price_promo + price_product_current_popup;
-									var product_sku = jQuery(this).parent().find('#product_sku_in_cart').val();
-
-									if (price_promo >= 500000 && jQuery.inArray(product_sku, arr_sku_promo_product) !== -1) {
-										alert(Translator.translate('The total value of promotional products must be less than VND 500.000.'));
-									} else {
-										$button.parent().find(".cart-item-quantity").val(newVal, this);
-										var div = jQuery(this).parent('.col-md-12').parent('.product-qty-table').find(".notifi");
-										qtyValidate(newVal, div, $btn_update);
-									}
-								}
-							});
-							jQuery('.btn-edit').unbind().click(function () {
-								var get_content = jQuery(this).parent('.col-md-8').parent('.col-md-12').parent('td').find('#shortdesciption');
-								if (jQuery('.btn-arrow-down').hasClass('active')) {
-									jQuery('.btn-arrow-up').addClass('active');
-									jQuery('.btn-arrow-down').removeClass('active');
-								} else {
-									jQuery('.btn-arrow-down').addClass('active');
-									jQuery('.btn-arrow-up').removeClass('active');
-								}
-
-
-								if (get_content.length > 0) {
-									jQuery(get_content).slideToggle(500);
-								}
-							});
-						});
-					</script>
-				</div>
-			</div>
 			<div class="notification-browser-ie" id="notification-browser-ie">
 				<div class="notification-browser-ie-content">
 					<p>Website kh&ocirc;ng hỗ trợ chạy tr&ecirc;n phi&ecirc;n bản tr&igrave;nh duyệt bạn đang sử dụng.
@@ -358,18 +198,19 @@
 						<div id="header-nav" class="skip-content">
 							<nav id="nav">
 								<ol class="nav-primary">
-									<li class="level0 nav-1 first parent"><a
+									<li class="level0 nav-1 first parent"><a href="./?tp=menu"
 											class="level0 has-children">Thực Đơn</a>
 										<ul class="level0">
 
-										<?php
+											<?php
 											$sql = "SELECT * FROM tbl_danh_muc";
 											$result = $connection->query($sql);
 											while($row = mysqli_fetch_array($result))  {
 											?>
-												<li class="level1 nav-1-1 first">
-													<a href="?tp=product&cate=<?php echo $row['id_danh_muc'] ?>" class="level1 "><?php echo $row['ten_danh_muc'] ?></a>
-												</li>
+											<li class="level1 nav-1-1 first">
+												<a href="?tp=product&cate=<?php echo $row['id_danh_muc'] ?>"
+													class="level1 "><?php echo $row['ten_danh_muc'] ?></a>
+											</li>
 											<?php
 											}
 										?>
@@ -382,24 +223,23 @@
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-3 active"><a href="?tp=discount"
+									<li class="level0 nav-3 active"><a href="promotions/index.html"
 											class="level0 ">Khuyến mãi</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-4 active"><a href="?tp=store" class="level0 ">Cửa
+									<li class="level0 nav-4 active"><a href="store.html/index.html" class="level0 ">Cửa
 											hàng</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-5 active"><a href="?tp=career" class="level0 ">Tuyển
+									<li class="level0 nav-5 active"><a href="career/index.html" class="level0 ">Tuyển
 											dụng</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
-									<li class="level0 nav-6 active last"><a
-											href="?tp=contact"
-											class="level0 ">Liên hệ</a></li>
+									<li class="level0 nav-6 active last"><a href="?tp=contact" class="level0 ">Liên
+											hệ</a></li>
 									<li class="hidden-xs"><img class="menu-separator"
 											src="../assets/skin/frontend/rwd/popeyes/images/topbar-separator.png"
 											alt=""></li>
@@ -432,9 +272,10 @@
 
 							<div class="account-cart-wrapper">
 
-							<?php
+								<?php
 							if(isset($_SESSION['email'])) { ?>
-								<a href="customer/account/index.html" data-target-element="#header-account" class="skip-link skip-account login">
+								<a href="customer/account/index.html" data-target-element="#header-account"
+									class="skip-link skip-account login">
 									<span class="icon login"></span>
 									<span class="full-name-customer"><?php echo $_SESSION['email'] ?></span>
 								</a>
@@ -449,8 +290,9 @@
 										</ul>
 									</div>
 								</div>
-							<?php } else { ?>
-								<a href="customer/account/index.html" data-target-element="#header-account" class="skip-link skip-account">
+								<?php } else { ?>
+								<a href="customer/account/index.html" data-target-element="#header-account"
+									class="skip-link skip-account">
 									<span class="icon"></span>
 								</a>
 								<div id="header-account" class="skip-content">
@@ -462,169 +304,40 @@
 										</ul>
 									</div>
 								</div>
-							<?php } ?>
+								<?php } ?>
 								<!-- Cart -->
 								<div class="header-minicart">
 
-									<a id="open-minicart-mobile" href="checkout/cart/index.html"
+									<!-- <a id="open-minicart-mobile" href="checkout/cart/index.html"
 										data-target-element="#header-cart" class="skip-link skip-cart  no-count ">
 										<span class="icon "></span>
 										<span class="label">Cart</span>
 										<span class="minicart-subtotal">0 ₫</span>
-									</a>
+									</a> -->
 
-									<a id="open-popup" class="skip-link skip-cart  no-count">
+									<?php
+										$san_phams = isset($_SESSION['san_phams']) ? $_SESSION['san_phams'] : [];
+										$tong_tien = 0;
+										foreach($san_phams as $row) {
+											$tong_tien += $row['don_gia'] * $row['so_luong'];
+										}
+									?>
+									<a href="./?tp=cart" id="open-popup" class="skip-cart  no-count" style="
+												background: #a31806;
+												border-radius: 5px;
+												height: 35px;
+												line-height: 35px;
+												cursor: pointer;
+											">
 										<span class="icon "></span>
 										<span class="label">Cart</span>
-										<span class="minicart-subtotal">0 ₫</span>
+										<span class="minicart-subtotal" style="color: white;"><?php echo number_format($tong_tien) ?> ₫</span>
 									</a>
-
-									<div id="header-cart" class="block block-cart skip-content">
-
-										<div class="loading-popup">
-											<img src="../assets/skin/frontend/rwd/popeyes/images/Pacman.gif"
-												alt="Đang xử lý dữ liệu để qua bước sau..."
-												title="Đang xử lý dữ liệu để qua bước sau..." class="v-middle" />
-										</div>
-										<div class="block-subtitle clearfix">
-											<h3>Phần ăn bạn đã chọn</h3>
-											<a id="popup-cart-close" onclick="openPopup()" href="#"
-												title="Đóng">&times;</a>
-										</div>
-										<div class="minicart-wrapper">
-											<div id="minicart-error-message" class="minicart-message"></div>
-											<div id="minicart-success-message" class="minicart-message"></div>
-											<p class="empty">Không có sản phẩm nào</p>
-										</div>
-										<script>
-											current_price_promo = 0;
-											function qtyValidate(qty, obj, $btn_update) {
-												var btnChange = jQuery(obj).parent('.product-qty-table').parent('tr').find('#change-food');
-												jQuery($btn_update).trigger("click");
-												screen = jQuery(window).width();
-												if (screen > 992) {
-													jQuery('.loading-popup').css('display', 'block');
-												}
-											}
-											function validateSubotal() {
-												var subtotal = 0;
-												if (subtotal < 100000) {
-													jQuery('.minicart-actions .checkout-button').css({
-														'pointer-events': 'none',
-														'opacity': '0.3'
-													});
-												} else {
-													jQuery('.minicart-actions .checkout-button').css({
-														'pointer-events': 'intitial',
-														'opacity': 'intitial'
-													});
-												}
-											}
-											function showMessage(event) {
-												event.preventDefault();
-												alert('Đơn hàng của quý khách chưa đủ 100.000₫ ,quý khách vui lòng đặt hàng thêm để có thể thanh toán.');
-											}
-											function checkDeliveryTime() {
-												var dt = new Date();
-												var minutes = dt.getMinutes();
-												var minutes = minutes < 10 ? '0' + minutes : minutes;
-												var curr_time = dt.getHours() + ":" + minutes;
-
-												var curt = new Date("November 13, 2013 " + curr_time);
-												curt = curt.getTime();
-												//start time
-												var start_time = "10:00";
-												//convert both time into timestamp
-												var stt = new Date("November 13, 2013 " + start_time);
-												stt = stt.getTime();
-
-												//end time
-												var end_time = "21:00";
-
-												var endt = new Date("November 13, 2013 " + end_time);
-												endt = endt.getTime();
-
-												if (!(stt <= curt && curt < endt)) {
-													event.preventDefault();
-													alert('Popeyes nhận giao hàng từ 10:00 - 21:00. Quý khách vui lòng đặt hàng trong khung giờ từ 10:00 - 21:00 hằng ngày');
-												}
-
-												var GrandTotal = parseInt(0);
-												if (GrandTotal >= 500000) {
-													if (current_price_promo) {
-														event.preventDefault();
-														alert(Translator.translate('The total value of promotional products must be less than VND 500.000.'));
-													}
-												}
-											}
-											jQuery(document).ready(function () {
-												//validateSubotal();
-												//        jQuery('.product-qty-table input.cart-item-quantity').on('keyup', function (ev) {
-												//            var qty = jQuery(this).val();
-												//            var div = jQuery(this).parent('.col-md-12').parent('.product-qty-table').find(".notifi");
-												//            var $btn_update = jQuery(this).parent().find(".quantity-button");
-												//            qtyValidate(qty, div, $btn_update);
-												//        });
-												jQuery('#popup-cart-close').click(function () {
-													jQuery('#popup-wrapper').fadeOut();
-													jQuery('#header-cart').fadeOut();
-													jQuery('#popup-overlay').fadeOut();
-												});
-
-												var price_promo = current_price_promo;
-												var price_product_current_popup = 0;
-												jQuery(".product-qty-table .button").unbind().click(function () {
-													var product_price = jQuery(this).parent().find('#product_price_in_cart').val();
-													var $button = jQuery(this);
-													var oldValue = $button.parent().find(".cart-item-quantity").val();
-													var $btn_update = $button.parent().find(".quantity-button");
-													if ($button.text() == "+") {
-														var newVal = parseFloat(oldValue) + 1;
-														price_product_current_popup = 1 * product_price;
-													} else {
-														// Don't allow decrementing below zero
-														if (oldValue > 1) {
-															var newVal = parseFloat(oldValue) - 1;
-															price_product_current_popup = -1 * product_price;
-														}
-													}
-													if (newVal > 0) {
-														price_promo = current_price_promo + price_product_current_popup;
-														var product_sku = jQuery(this).parent().find('#product_sku_in_cart').val();
-
-														if (price_promo >= 500000 && jQuery.inArray(product_sku, arr_sku_promo_product) !== -1) {
-															alert(Translator.translate('The total value of promotional products must be less than VND 500.000.'));
-														} else {
-															$button.parent().find(".cart-item-quantity").val(newVal, this);
-															var div = jQuery(this).parent('.col-md-12').parent('.product-qty-table').find(".notifi");
-															qtyValidate(newVal, div, $btn_update);
-														}
-													}
-												});
-												jQuery('.btn-edit').unbind().click(function () {
-													var get_content = jQuery(this).parent('.col-md-8').parent('.col-md-12').parent('td').find('#shortdesciption');
-													if (jQuery('.btn-arrow-down').hasClass('active')) {
-														jQuery('.btn-arrow-up').addClass('active');
-														jQuery('.btn-arrow-down').removeClass('active');
-													} else {
-														jQuery('.btn-arrow-down').addClass('active');
-														jQuery('.btn-arrow-up').removeClass('active');
-													}
-
-
-													if (get_content.length > 0) {
-														jQuery(get_content).slideToggle(500);
-													}
-												});
-											});
-										</script>
-									</div>
 								</div>
-
 							</div>
 						</div>
 
-						
+
 					</div>
 					<ul id="multiple-language"
 						class="nav navbar-nav navbar-right navbar-inverse hidden-xs language_block">
@@ -900,7 +613,8 @@
 						</div>
 					</div>
 				</div>
-				<address class="copyright">HỌC VIỆN NGÂN HÀNG <br> SỐ 12 CHÙA BỘC - HÀ NỘI <br> Hotline: 1900 6008 | Email:
+				<address class="copyright">HỌC VIỆN NGÂN HÀNG <br> SỐ 12 CHÙA BỘC - HÀ NỘI <br> Hotline: 1900 6008 |
+					Email:
 					contact@popeyes.vn | MST: 0310 362 754 <div class="levinci-introduce"><a class="levinci-link"
 							href="https://levincigroup.com/">Designed by 20 Group</a></div>
 				</address>
