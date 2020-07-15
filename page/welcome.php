@@ -30,7 +30,7 @@
             <div class="col-md-3 col-sm-6">
                 <div class="widget widget-static-block">
                     <div class="body-items">
-                        <div class="img-main"><a href="products.html" target="_blank"><img alt="image"
+                        <div class="img-main"><a target="_blank"><img alt="image"
                                     src="../assets/media/wysiwyg/popeyes/home_block_menu_V.jpg" /></a>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
             <div class="col-md-3 col-sm-6">
                 <div class="widget widget-static-block">
                     <div class="body-items">
-                        <div class="img-main"><a href="giaohang.html"><img alt="image"
+                        <div class="img-main"><a><img alt="image"
                                     src="../assets/media/wysiwyg/popeyes/home_block_deli_V.jpg" /></a>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
             <div class="col-md-3 col-sm-6">
                 <div class="widget widget-static-block">
                     <div class="body-items">
-                        <div class="img-main"><a href="https://bitly.com/APPLY-IPPGFB"><img alt="image"
+                        <div class="img-main"><a><img alt="image"
                                     src="../assets/media/wysiwyg/home_block_career_V.jpg" /></a>
                         </div>
                         <div class="img-layer-1"></div>
@@ -58,7 +58,7 @@
             <div class="col-md-3 col-sm-6">
                 <div class="widget widget-static-block">
                     <div class="body-items">
-                        <div class="img-main"><a href="birthday.html"><img alt="image"
+                        <div class="img-main"><a><img alt="image"
                                     src="../assets/media/wysiwyg/popeyes/home_block_birthday_V.jpg" /></a>
                         </div>
                     </div>
