@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 14, 2020 lúc 06:50 PM
+-- Thời gian đã tạo: Th7 15, 2020 lúc 02:16 PM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.4
 
@@ -30,11 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_chi_tiet_don_hang` (
   `id_don_hang` int(11) NOT NULL,
   `id_san_pham` int(11) NOT NULL,
-  `don_gia` float(255,0) NOT NULL,
-  `so_luong` int(11) NOT NULL,
-  `thanh_tien` float(255,0) NOT NULL,
+  `don_gia` float(255,0) DEFAULT NULL,
+  `so_luong` int(11) DEFAULT NULL,
+  `thanh_tien` float(255,0) DEFAULT NULL,
   `ghi_chu` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_chi_tiet_don_hang`
+--
+
+INSERT INTO `tbl_chi_tiet_don_hang` (`id_don_hang`, `id_san_pham`, `don_gia`, `so_luong`, `thanh_tien`, `ghi_chu`) VALUES
+(3, 1, 36000, 2, 72000, NULL);
 
 -- --------------------------------------------------------
 
@@ -75,11 +82,18 @@ INSERT INTO `tbl_danh_muc` (`id_danh_muc`, `ten_danh_muc`, `mo_ta`, `anh`) VALUE
 CREATE TABLE `tbl_don_hang` (
   `id_don_hang` int(11) NOT NULL,
   `id_khach_hang` int(11) DEFAULT NULL,
-  `id_nhan_vien` int(11) NOT NULL,
-  `tong_tien` float(255,0) NOT NULL,
+  `id_nhan_vien` int(11) DEFAULT NULL,
+  `tong_tien` float(255,0) DEFAULT NULL,
   `trang_thai` int(4) DEFAULT 0,
   `ngay_dat` datetime(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_don_hang`
+--
+
+INSERT INTO `tbl_don_hang` (`id_don_hang`, `id_khach_hang`, `id_nhan_vien`, `tong_tien`, `trang_thai`, `ngay_dat`) VALUES
+(3, 1, NULL, 72000, 0, '0000-00-00 00:00:00.000000');
 
 -- --------------------------------------------------------
 
@@ -96,6 +110,13 @@ CREATE TABLE `tbl_khach_hang` (
   `ghi_chu` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `mat_khau` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbl_khach_hang`
+--
+
+INSERT INTO `tbl_khach_hang` (`id_khach_hang`, `ten_khach_hang`, `email`, `so_dien_thoai`, `dia_chi`, `ghi_chu`, `mat_khau`) VALUES
+(1, 'trần văn tú', 'tuchem002@gmail.com', '0945320619', 'ngách 12, ngõ 185 chùa láng, đống đa, hà nội', NULL, '123456');
 
 -- --------------------------------------------------------
 
@@ -117,7 +138,7 @@ CREATE TABLE `tbl_nhan_vien` (
 --
 
 INSERT INTO `tbl_nhan_vien` (`id_nhan_vien`, `ten_nhan_vien`, `email`, `so_dien_thoai`, `tai_khoan`, `mat_khau`) VALUES
-(1, 'mai đức việt', 'sktt1levi99@gmail.com', '0945320619', 'abc', '28c8edde3d61a0411511d3b1866f0636');
+(1, 'mai đức việt', 'sktt1levi99@gmail.com', '0945320619', 'abc', '1');
 
 -- --------------------------------------------------------
 
@@ -236,13 +257,13 @@ ALTER TABLE `tbl_danh_muc`
 -- AUTO_INCREMENT cho bảng `tbl_don_hang`
 --
 ALTER TABLE `tbl_don_hang`
-  MODIFY `id_don_hang` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_don_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_khach_hang`
 --
 ALTER TABLE `tbl_khach_hang`
-  MODIFY `id_khach_hang` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_khach_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_nhan_vien`
