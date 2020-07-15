@@ -160,8 +160,7 @@
                                             <h4 class="minicart-note">Chú ý:</h4>
                                             <p class="minicart-note minicart-note-content">- Áp dụng nước chai khi giao
                                                 hàng tận nơi</p>
-                                            <p class="minicart-note minicart-note-content">- Chỉ giao hàng cho phần ăn
-                                                trên 100.000₫</p>
+                                            <p class="minicart-note minicart-note-content">- Miễn phí giao hàng dưới 3km</p>
                                         </div>
                                         <form action="payment.php" method="POST">
                                             <input type="hidden" name="tong_tien" value="<?php echo $tong_tien; ?>" />
