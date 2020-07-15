@@ -11,11 +11,7 @@
                                                 <div class="logo-poperyes"><img alt="logo-story-poperyes-vn"
                                                         src=".././assets/media/wysiwyg/popeyes/ve-chung-toi.png" /></div>
                                                 <div class="description">
-                                                    <p>Hơn 40 năm trước tại New Orleans thuộc tiểu bang Louisiana, một
-                                                        huyền thoại ẩm thực đ&atilde; ra đời. Khởi đầu từ một nh&agrave;
-                                                        h&agrave;ng nhỏ v&agrave; một &yacute; tưởng lớn, "cơn
-                                                        b&atilde;o" Louisiana đ&atilde; "c&agrave;n qu&eacute;t" mọi
-                                                        quốc gia v&agrave; lan rộng khắp thế giới.</p>
+                                                    <p>Hơn 40 năm trước tại New Orleans thuộc tiểu bang Louisiana, một huyền thoại ẩm thực đã ra đời. Khởi đầu từ một nhà hàng nhỏ và một ý tưởng lớn, "cơn bão" Louisiana đã "càn quét" mọi quốc gia và lan rộng khắp thế giới.</p>
                                                 </div>
                                                 <div class="history-date">
                                                     <ul>
@@ -57,16 +53,8 @@
                                             <div class="col-md-7">
                                                 <div class="text-his">
                                                     <h4>1972:</h4>
-                                                    <p>&Ocirc;ng Alvin C. Copeland khai trương nh&agrave; h&agrave;ng
-                                                        "Chicken on the Run" tại v&ugrave;ng ngoại &ocirc; Arabi của New
-                                                        Orleans, chuy&ecirc;n phục vụ c&aacute;c m&oacute;n g&agrave;
-                                                        r&aacute;n truyền thống của miền Nam.</p>
-                                                    <p>Sau một thời gian ngắn kh&ocirc;ng th&agrave;nh c&ocirc;ng như
-                                                        mong đợi, Alvin đổi t&ecirc;n nh&agrave; h&agrave;ng
-                                                        th&agrave;nh "Popeyes" (đặt theo t&ecirc;n của nh&acirc;n vật
-                                                        Popeye Doyle trong phim "French Connection"). Lần n&agrave;y
-                                                        &ocirc;ng quyết định b&aacute;n m&oacute;n g&agrave; cay theo
-                                                        phong c&aacute;ch New Orleans.</p>
+                                                    <p>Ông Alvin C. Copeland khai trương nhà hàng "Chicken on the Run" tại vùng ngoại ô Arabi của New Orleans, chuyên phục vụ các món gà rán truyền thống của miền Nam.</p>
+                                                    <p>Sau một thời gian ngắn không thành công như mong đợi, Alvin đổi tên nhà hàng thành "Popeyes" (đặt theo tên của nhân vật Popeye Doyle trong phim "French Connection"). Lần này ông quyết định bán món gà cay theo phong cách New Orleans.</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
@@ -85,49 +73,41 @@
                                                 <div class="image-his right"><img style="width: 70%;height: 30%" alt="his-1980-1"
                                                         src=".././assets/media/wysiwyg/popeyes/his-1980-1.jpg" />
                                                     <div class="desc">
-                                                        <p>Popeyes giới thiệu tagline "Love That Chicken from
-                                                            Popeyes&reg;".</p>
+                                                        <p>Popeyes giới thiệu tagline "Love That Chicken from Popeyes®".</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="text-his">
                                                     <h4>1983:</h4>
-                                                    <p>Popeyes cho ra mắt biscuit bơ sữa, sớm trở th&agrave;nh một trong
-                                                        những m&oacute;n đặc trưng trong thực đơn của Popeyes sau
-                                                        n&agrave;y.</p>
+                                                    <p>Popeyes cho ra mắt biscuit bơ sữa, sớm trở thành một trong những món đặc trưng trong thực đơn của Popeyes sau này.</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-7">
                                                 <div class="text-his">
                                                     <h4>1984:</h4>
-                                                    <p>Popeyes ph&aacute;t triển to&agrave;n cầu v&agrave; mở rộng đến
-                                                        Toronto, Canada.</p>
+                                                    <p>Popeyes phát triển toàn cầu và mở rộng đến Toronto, Canada.</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-7 hidden-xs hidden-sm">
                                                 <div class="image-his right"><img style="width: 70%;height: 35%;" alt="his-1980-2"
                                                         src=".././assets/media/wysiwyg/popeyes/his-1980-2.jpg" />
                                                     <div class="desc">
-                                                        <p>Popeyes giới thiệu m&oacute;n T&ocirc;m crawfish tại Mỹ.</p>
+                                                        <p>Popeyes giới thiệu món Tôm crawfish tại Mỹ.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="text-his">
                                                     <h4>1985:</h4>
-                                                    <p>Popeyes mở nh&agrave; h&agrave;ng thừ 500 tại Landover, Maryland,
-                                                        đưa thương hiệu l&ecirc;n ngang tầm c&ugrave;ng c&aacute;c đối
-                                                        thủ kh&aacute;c trong nước.</p>
-                                                    <p>Popeyes vươn l&ecirc;n vị tr&iacute; số 3 về chuỗi đồ ăn nhanh
-                                                        chuy&ecirc;n về c&aacute;c m&oacute;n g&agrave; dựa tr&ecirc;n
-                                                        số lượng b&aacute;n ra.</p>
+                                                    <p>Popeyes mở nhà hàng thừ 500 tại Landover, Maryland, đưa thương hiệu lên ngang tầm cùng các đối thủ khác trong nước.</p>
+                                                    <p>Popeyes vươn lên vị trí số 3 về chuỗi đồ ăn nhanh chuyên về các món gà dựa trên số lượng bán ra.</p>
                                                 </div>
                                             </div>
                                             <div class="col-md-7 hidden-lg hidden-md">
                                                 <div class="image-his right"><br />
                                                     <div class="desc">
-                                                        <p>Popeyes giới thiệu m&oacute;n T&ocirc;m crawfish tại Mỹ.</p>
+                                                        <p>Popeyes giới thiệu món Tôm crawfish tại Mỹ.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -152,10 +132,7 @@
                                                 <div class="col-md-8">
                                                     <div class="text-his">
                                                         <h4>1992:</h4>
-                                                        <p>AFC Enterprises, Inc. ( trước đ&acirc;y l&agrave; C&ocirc;ng
-                                                            ty American's Favourite Chicken) được th&agrave;nh lập
-                                                            v&agrave; mua lại Popeyes&reg; v&agrave; Church's
-                                                            Chicken&reg;.</p>
+                                                        <p>AFC Enterprises, Inc. ( trước đây là Công ty American's Favourite Chicken) được thành lập và mua lại Popeyes® và Church's Chicken®.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,9 +141,7 @@
                                                     <div class="image-his bottom"><img alt="his-1993"
                                                             src=".././assets/media/wysiwyg/popeyes/his-1993.jpg" />
                                                         <div class="desc ">
-                                                            <p>Popeyes đ&aacute;nh dấu bước ph&aacute;t triển mới khi
-                                                                PLK l&agrave;m mới lại thiết kế chuỗi nh&agrave;
-                                                                h&agrave;ng Popeyes</p>
+                                                            <p>Popeyes đánh dấu bước phát triển mới khi PLK làm mới lại thiết kế chuỗi nhà hàng Popeyes</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -174,7 +149,7 @@
                                                     <div class="image-his bottom"><img alt="his-1997"
                                                             src=".././assets/media/wysiwyg/popeyes/his-1997.jpg" />
                                                         <div class="desc ">
-                                                            <p>Popeyes kỷ niệm 25 năm th&agrave;nh c&ocirc;ng</p>
+                                                            <p>Popeyes kỷ niệm 25 năm thành công</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -184,21 +159,15 @@
                                                     <div class="image-his bottom"><img alt="his-1999-1"
                                                             src=".././assets/media/wysiwyg/popeyes/his-1999-1.jpg" />
                                                         <div class="desc ">
-                                                            <p>Popeyes Chicken &amp; Biscuit nhận giải thưởng
-                                                                "MenuMasters" cho c&ocirc;ng thức huyền thoại Louisiana
-                                                                được sử dụng trong c&aacute;c m&oacute;n cơm</p>
+                                                            <p>Popeyes Chicken & Biscuit nhận giải thưởng "MenuMasters" cho công thức huyền thoại Louisiana được sử dụng trong các món cơm</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="text-his">
                                                         <h4>1999:</h4>
-                                                        <p>Lần đầu ti&ecirc;n Popeyes c&oacute; doanh số năm vượt ngưỡng
-                                                            1 tỷ đ&ocirc;la.</p>
-                                                        <p>Popeyes khai trương nh&agrave; h&agrave;ng thứ 1000 tại trung
-                                                            t&acirc;m Atlanta, nơi trở th&agrave;nh t&acirc;m điểm thu
-                                                            h&uacute;t đ&ocirc;ng đảo kh&aacute;ch du lịch với sự kiện
-                                                            Olympic H&egrave; 1996.</p>
+                                                        <p>Lần đầu tiên Popeyes có doanh số năm vượt ngưỡng 1 tỷ đôla.</p>
+                                                        <p>Popeyes khai trương nhà hàng thứ 1000 tại trung tâm Atlanta, nơi trở thành tâm điểm thu hút đông đảo khách du lịch với sự kiện Olympic Hè 1996.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -214,12 +183,8 @@
                                                 <div class="image-his bottom"><img alt="his-2001"
                                                         src=".././assets/media/wysiwyg/popeyes/his-2001.jpg" />
                                                     <div class="desc">
-                                                        <p>Popeyes vươn l&ecirc;n vị tr&iacute; số 2 về chuỗi đồ ăn
-                                                            nhanh chuy&ecirc;n về c&aacute;c m&oacute;n g&agrave; dựa
-                                                            tr&ecirc;n số lượng b&aacute;n ra.</p>
-                                                        <p>Popeyes Chicken &amp; Biscuits tưng bừng khai trương
-                                                            nh&agrave; h&agrave;ng mới với thiết kế cổ điển trang
-                                                            nh&atilde; tại Atlanta, GA.</p>
+                                                        <p>Popeyes vươn lên vị trí số 2 về chuỗi đồ ăn nhanh chuyên về các món gà dựa trên số lượng bán ra.</p>
+                                                        <p>Popeyes Chicken & Biscuits tưng bừng khai trương nhà hàng mới với thiết kế cổ điển trang nhã tại Atlanta, GA.</p>
                                                     </div>
                                                 </div>
                                                 <div class="text-his hidden-lg hidden-md">

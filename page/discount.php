@@ -43,7 +43,7 @@ Hãy khám phá những chương trình khuyến mãi, các món ăn mới nhấ
                                 <div class="item-promotion">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="https://popeyes.vn/big-order.html/" target="_blank" title="">
+                        
                             <figure class="image-item">
                                 <img alt="promotion_image_2" src="https://popeyes.vn/media/images/promo_2007_bigorder.jpg">
                             </figure>

@@ -501,7 +501,7 @@
 						<div class="row">
 							<div class="col-md-7 clearfix">
 								<div class="row clearfix">
-									<p><a href="contact.php">Li&ecirc;n Hệ</a></p>
+									<p><a href="?tp=contact">Liên hệ</a></p>
 									
 								</div>
 								<div class="row clearfix">

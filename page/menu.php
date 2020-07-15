@@ -15,18 +15,7 @@
                         <div class="header_bn header_pro">
                             <div class="container">
                                 <div class="col-md-7"><img alt="welcome" src="../assets/media/wysiwyg/popeyes/welcome-vn.png" />
-                                    <p class="header_bn_txt">Hơn 300 năm trước, 7 truyền thống ẩm thực kh&aacute;c biệt
-                                        ho&agrave;n to&agrave;n đ&atilde; c&ugrave;ng hội tụ v&agrave; đ&uacute;c kết
-                                        n&ecirc;n một b&iacute; quyết ẩm thực đậm chất Mỹ mang t&ecirc;n Louisiana
-                                        Cooking. Kế thừa di sản tinh tu&yacute; đ&oacute;, giờ đ&acirc;y ch&uacute;ng
-                                        t&ocirc;i tự h&agrave;o mang đến cho người ti&ecirc;u d&ugrave;ng những
-                                        m&oacute;n ăn tuyệt vời nhất theo c&aacute;ch ri&ecirc;ng của m&igrave;nh.
-                                        C&aacute;c th&agrave;nh phần gia vị được ho&agrave; trộn ho&agrave;n hảo với
-                                        từng lớp bột phủ l&ecirc;n miếng g&agrave; r&aacute;n được nh&agrave;o nặn
-                                        c&ocirc;ng phu bằng tay, cho ra đời những m&oacute;n ăn ngon miệng v&agrave; đậm
-                                        đ&agrave; kh&oacute; qu&ecirc;n... Với tất cả mọi nỗ lực v&agrave; t&acirc;m
-                                        huyết n&agrave;y, ch&uacute;ng t&ocirc;i hy vọng sẽ mang đến bạn một trải nghiệm
-                                        ẩm thực thật phong ph&uacute; v&agrave; sự h&agrave;i l&ograve;ng tuyệt đối.</p>
+                                    <p class="header_bn_txt">Hơn 300 năm trước, 7 truyền thống ẩm thực khác biệt hoàn toàn đã cùng hội tụ và đúc kết nên một bí quyết ẩm thực đậm chất Mỹ mang tên Louisiana Cooking. Kế thừa di sản tinh tuý đó, giờ đây chúng tôi tự hào mang đến cho người tiêu dùng những món ăn tuyệt vời nhất theo cách riêng của mình. Các thành phần gia vị được hoà trộn hoàn hảo với từng lớp bột phủ lên miếng gà rán được nhào nặn công phu bằng tay, cho ra đời những món ăn ngon miệng và đậm đà khó quên... Với tất cả mọi nỗ lực và tâm huyết này, chúng tôi hy vọng sẽ mang đến bạn một trải nghiệm ẩm thực thật phong phú và sự hài lòng tuyệt đối.</p>
                                 </div>
                                 <div class="col-md-5"><a href="products/mon-moi.html" target="_blank"> <img
                                             src="../assets/media/wysiwyg/menu_image_690x518_gskp.jpg" /></a></div>
