@@ -64,11 +64,13 @@
                                                             </tr>
                                                             <?php
 
-                                                                var_dump ($_SESSION['san_phams']);
-                                                                $san_phams = $_SESSION['san_phams'];
-                                                                $idx = 1;
-                                                                foreach ($san_phams as $row) { $idx++; ?>
-
+                                                                $san_phams = isset($_SESSION['san_phams']) ? $_SESSION['san_phams'] : [] ;
+                                                                // var_dump($san_phams);
+                                                                $tong_tien = 0;
+                                                                foreach ($san_phams as $key => $row) { 
+                                                                     $tong_tien += $row['so_luong'] * $row['don_gia'];
+                                                                     
+                                                                     ?>
                                                             <tr>
                                                                 <td>
                                                                     <div class="col-md-12">
@@ -78,7 +80,7 @@
                                                                             </a>
                                                                         <div class="col-md-8 clearfix">
                                                                             <p class="product-name"><a><?php echo $row['ten_san_pham'] ?></a></p>
-                                                                            <a id="view-des" href="#"
+                                                                            <a id="view-des"
                                                                                 data-collapse="#shortdesciption"
                                                                                 title="Sửa thông tin" class="btn-edit">
                                                                                 Xem chi tiết <i
@@ -100,9 +102,11 @@
                                                                 </td>
                                                                 <td class="product-qty-table">
                                                                     <div class="col-md-12 clearfix">
-                                                                        <input type="number" min="1"
-                                                                            class="cart-item-quantity input-text text-center" style="margin-left: 30px;"
-                                                                            name="" value="2" onkeypress="return false">
+                                                                        <a href="./?tp=order&ac=dec&product_id=<?php echo $row['id_san_pham'] ?>" class="dec button">-</a>
+                                                                        <input type="number" min="1" id="qty_<?php echo $key ?>" disabled="true"
+                                                                            class="cart-item-quantity input-text text-center"
+                                                                            name="" value="<?php echo $row['so_luong'] ?>" onkeypress="return false">
+                                                                        <a href="./?tp=order&product_id=<?php echo $row['id_san_pham'] ?>" class="inc button">+</a>
                                                                     </div>
                                                                 </td>
                                                                 <td
@@ -148,7 +152,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <p class="grand-total text-align-left">
-                                                        <span class="price">188.000&nbsp;₫</span> </p>
+                                                        <span class="price"><?php echo number_format($tong_tien) ?>&nbsp;₫</span> </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -159,19 +163,22 @@
                                             <p class="minicart-note minicart-note-content">- Chỉ giao hàng cho phần ăn
                                                 trên 100.000₫</p>
                                         </div>
-                                        <div class="minicart-actions">
-                                            <ul class="checkout-types minicart">
-                                                <li>
-                                                    <a title="Tiếp tục mua" class="button btn-continue-shopping "
-                                                        href="https://popeyes.vn/products/">
-                                                        Tiếp tục mua </a>
-                                                    <a title="Thanh toán" onclick="checkDeliveryTime(event)"
-                                                        class="button checkout-button"
-                                                        href="https://popeyes.vn/onestepcheckout/">
-                                                        Thanh toán </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <form action="payment.php" method="POST">
+                                            <input type="hidden" name="tong_tien" value="<?php echo $tong_tien; ?>" />
+                                            <div class="minicart-actions">
+                                                <ul class="checkout-types minicart">
+                                                    <li>
+                                                        <a title="Tiếp tục mua" class="button btn-continue-shopping "
+                                                            href="https://popeyes.vn/products/">
+                                                            Tiếp tục mua </a>
+                                                        <button title="Thanh toán" type="submit"
+                                                            class="button checkout-button"
+                                                        >
+                                                            Thanh toán </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
                                         <div class="minicart-related-product">
                                         </div>
                                     </div>

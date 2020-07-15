@@ -34,7 +34,9 @@
 	} else {
 		session_start();
 
+		$row = $kiem_tra_dang_nhap->fetch_assoc();
 		$_SESSION['email'] = $email;
+		$_SESSION['id_khach_hang'] = $row['id_khach_hang'];
 
 		echo 
 		"
