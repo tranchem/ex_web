@@ -244,7 +244,7 @@
 								<?php
 							if(isset($_SESSION['email'])) { ?>
 								<a href="customer/account/index.html" data-target-element="#header-account"
-									class="skip-link skip-account login">
+									class="skip-link skip-account login" style="float: none !important">
 									<span class="icon login"></span>
 									<span class="full-name-customer"><?php echo $_SESSION['email'] ?></span>
 								</a>

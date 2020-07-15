@@ -5797,7 +5797,7 @@ div.atwork div.Growler-notice-body {
 
 .customer-account-login .login,
 .customer-account-create .login{
-    /* float: right; */
+    float: right;
 }
 .account-from .footer-form {
     margin-top: 30px;

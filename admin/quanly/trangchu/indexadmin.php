@@ -2,7 +2,7 @@
 	//Hiển thị danh sách đơn hàng
       $sql="SELECT t1.id_don_hang, t1.ngay_dat, t1.tong_tien, t2.ten_khach_hang, t3.ten_nhan_vien 
       FROM tbl_don_hang t1 JOIN tbl_khach_hang t2 ON t1.id_khach_hang = t2.id_khach_hang 
-      					JOIN tbl_nhan_vien t3 ON t1.id_nhan_vien = t3.id_nhan_vien" ;
+      					LEFT JOIN tbl_nhan_vien t3 ON t1.id_nhan_vien = t3.id_nhan_vien";
       $query=$connection->query($sql);
  ?>
 
